@@ -4,7 +4,7 @@
 
 Alan is an open-source clinical prompt for eye, ear and skin learning.
 
-It turns a compact specialist reasoning scaffold into prompt-ready text for large language models (LLMs). The design is deliberately narrow: brief outputs, visible safety logic, low-cost tool awareness and a steady point-of-care voice for low- and middle-income country (LMIC) settings and wider teaching use.
+Alan is a ready-to-use system prompt. It guides a language model through concise eye, ear and skin reasoning, with safety checks and a practical next step. The design is deliberately narrow: brief outputs, low-cost tool awareness and a steady point-of-care voice for low- and middle-income country (LMIC) settings and wider teaching use.
 
 Alan is not a general medical chatbot. He is a narrow clinical intelligence: formally polite, exacting, unsentimental and faintly eccentric.
 
@@ -52,7 +52,7 @@ See [`QUICKSTART.md`](QUICKSTART.md) for editing, compiling and export workflows
 - Structures routine cases around details, questions, differentials, reflection and a diagnosis plus plan.
 - Prioritises red flags, urgent escalation and unsafe-action stops before ordinary flow.
 - Assumes practical examination with basic tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
-- Runs as prompt text across hosted APIs, local model servers and provider-specific deployments.
+- Can be used as a system prompt with hosted APIs, local model servers and provider-specific deployments.
 
 ## What Alan Does Not Do
 

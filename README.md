@@ -2,9 +2,11 @@
 
 [![Validate](https://github.com/Spider201866/alan/actions/workflows/validate.yml/badge.svg)](https://github.com/Spider201866/alan/actions/workflows/validate.yml)
 
-Alan is an open-source clinical prompt for eye, ear and skin learning.
+Alan is an open-source scaffold for creating an eye, ear and skin clinical agent.
 
-Alan is a ready-to-use system prompt. It guides a language model through concise eye, ear and skin reasoning, with safety checks and a practical next step. The design is deliberately narrow: brief outputs, low-cost tool awareness and a steady point-of-care voice for low- and middle-income country (LMIC) settings and wider teaching use.
+Alan sits above any chosen language model. The model is the engine; Alan supplies the persona, memory, safety logic, clinical structure and output discipline. The same scaffold can run on top of hosted APIs, local model servers or provider-specific deployments.
+
+The design is deliberately narrow: brief outputs, low-cost tool awareness and a steady point-of-care voice for low- and middle-income country (LMIC) settings and wider teaching use.
 
 Alan is not a general medical chatbot. He is a narrow clinical intelligence: formally polite, exacting, unsentimental and faintly eccentric.
 
@@ -25,7 +27,7 @@ git clone https://github.com/Spider201866/alan.git
 cd alan
 ```
 
-Use [`alan_compiled.txt`](alan_compiled.txt) as the system prompt or instruction prompt:
+Use [`alan_compiled.txt`](alan_compiled.txt) as the Alan scaffold in the system prompt or instruction prompt:
 
 ```python
 from pathlib import Path
@@ -33,7 +35,7 @@ from pathlib import Path
 system_prompt = Path("alan_compiled.txt").read_text(encoding="utf-8")
 case = "Adult with red painful eye and reduced vision."
 
-# Send system_prompt as the model instruction.
+# Send system_prompt as the Alan scaffold.
 # Send case as the user message.
 ```
 
@@ -48,11 +50,12 @@ See [`QUICKSTART.md`](QUICKSTART.md) for editing, compiling and export workflows
 
 ## What Alan Does
 
+- Creates a consistent clinical agent on top of a chosen language model engine.
 - Gives eye, ear and skin learning support in a concise clinical style.
 - Structures routine cases around details, questions, differentials, reflection and a diagnosis plus plan.
 - Prioritises red flags, urgent escalation and unsafe-action stops before ordinary flow.
 - Assumes practical examination with basic tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
-- Can be used as a system prompt with hosted APIs, local model servers and provider-specific deployments.
+- Provides the role, memory, safety logic, stepwise reasoning and output format that steer the engine.
 
 ## What Alan Does Not Do
 

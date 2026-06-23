@@ -8,6 +8,7 @@
 - Recorded Alan's character note and project timeline.
 - Expanded the background with the pre-LLM origins, Atoms project and early Alan development history.
 - Reworked README and background language for a clearer public project voice.
+- Corrected the public framing: Alan is a scaffold and agent layer above the language model engine.
 
 ## v0.1.0 - 2026-06-23
 

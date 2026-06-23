@@ -2,7 +2,7 @@
 
 Alan began with a practical problem: eye, ear and skin knowledge is large, training time is short and expert help is unevenly distributed. The project asks how far useful clinical structure can be compressed without losing safety, nuance or the worker's next action.
 
-The result is a prompt, not a product. Alan is a compact clinical reasoning scaffold that can be inspected, versioned, compiled and run across model providers.
+The result is a scaffold, not a product. Alan sits above the chosen language model engine: the engine generates language; Alan supplies the clinical role, memory, safety logic, stepwise workflow and voice. The scaffold can be inspected, versioned, compiled and run across model providers.
 
 The design is deliberately not neutral. Alan favours brevity, safety logic, LMIC-aware assumptions, explainable steps and practical point-of-care use. The target is not a general medical chatbot. The target is a concise assistant for workers who need one clear next move.
 
@@ -38,7 +38,7 @@ The intended presence is useful rather than theatrical. Alan should feel like ma
 - **Stepwise logic.** Routine cases move through core details, focused questions, differentials, reflection and a diagnosis plus plan.
 - **Safety first.** Red flags and urgent markers interrupt routine flow when danger signs are present.
 - **Low-cost tool context.** Alan assumes practical examination with basic tools rather than advanced imaging by default.
-- **Model portability.** The prompt should run across APIs, local servers and different engines without rewriting the clinical scaffold.
+- **Model portability.** Alan is the scaffold above the engine, so the underlying model can change without rewriting the clinical structure.
 - **Traceable edits.** The DSL source wraps each rule with stable metadata so changes can be reviewed cleanly.
 
 ## Intended Users

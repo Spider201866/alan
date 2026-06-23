@@ -1,0 +1,86 @@
+Validation Report
+Date: 23 June 2026
+
+Scope
+- Verify `alan_sm.md` and `Alan_DSL` are content-identical after stripping DSL wrappers.
+- Verify `Alan_DSL` has no DSL v13 lint errors.
+- Verify TAG/GROUP usage is sensible for the current v13 step-group setup.
+- Verify both compilers run and produce matching compiled outputs.
+- Verify the compiler unit tests pass.
+
+Canonical Group Order
+- **01** `CORE`
+- **02** `SCOPE`
+- **03** `TOOLS`
+- **04** `OUTPUT`
+- **05** `STYLE`
+- **06** `CHECKS`
+- **07** `LISTS`
+- **08** `RED`
+- **09** `LOGIC`
+- **10** `LOGIC_S1`
+- **11** `LOGIC_S2`
+- **12** `LOGIC_S3`
+- **13** `LOGIC_S4`
+- **14** `LOGIC_S5`
+- **15** `EXAMPLES`
+- **16** `EX_FULL`
+- **17** `EX_SHORT`
+- **18** `EX_EYE`
+- **19** `EX_ENT`
+- **20** `EX_DERM`
+- **21** `EX_CHILD`
+- **22** `EX_VET`
+- **23** `MEMORY`
+- **24** `MEM_EYE`
+- **25** `MEM_ENT`
+- **26** `MEM_DERM`
+- **27** `MEM_CHILD`
+- **28** `MEM_VET`
+- **29** `MEM_RED`
+- **30** `SECURITY`
+
+1) Gold Standard Content Parity
+- Source files checked: `alan_sm.md` and `Alan_DSL`
+- Result: PASS
+- Exact equality after wrapper stripping: `True`
+- Line counts: `628` vs `628`
+- SHA-256 (`alan_sm.md`): `aca67873d27471af7c9482db7bd488b0f648cca82f963481f4528b316514c731`
+- SHA-256 (`Alan_DSL` stripped): `aca67873d27471af7c9482db7bd488b0f648cca82f963481f4528b316514c731`
+
+2) DSL Lint
+- Wrapped rules: `510`
+- Unique IDs: `510`
+- Duplicate IDs: `0`
+- Wrapper format errors: `0`
+- Unknown section codes: `0`
+- Unknown TAG values: `0`
+- Unknown GROUP values: `0`
+- Deprecated IDs (`EXS-*`): `0`
+- Result: PASS
+
+3) TAG/GROUP Coverage
+- Result: PASS_WITH_NOTES
+- Top TAG: `EX` at `32.4%` (`165/510`), expected because examples remain a large section.
+- Groups used in source rules: `18` of `30` known groups.
+- Note: not all 30 groups must appear as wrappers; several are available fine-grain ablation switches.
+
+4) Compiler Verification
+- `python compile_DSL.py`: PASS, wrote `Alan_dsl_complied.txt`
+- `python compile.py`: PASS, wrote `alan_compiled.txt`
+- Cross-compiler exact byte match: `True`
+- SHA-256 both compiled outputs: `8eb62804267ea3c8e88c51d8df35c3ce6f9d055507ac1fc8a1f419fd875d601d`
+- Compiled output line count: `566`
+- Compiled output size: `107201` bytes
+- Residual DSL wrapper lines in compiled output: `0`
+
+5) Unit Tests
+- `python -m unittest tests.test_compilers`: PASS
+- Tests run: `8`
+
+Overall
+- Check 1, content parity: PASS
+- Check 2, DSL lint: PASS
+- Check 3, tag/group coverage: PASS_WITH_NOTES
+- Check 4, compiler verification: PASS
+- Check 5, compiler tests: PASS

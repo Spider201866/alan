@@ -1,0 +1,35 @@
+/.venv/
+/.vscode/
+/.playwright-mcp/
+__pycache__/
+*.py[cod]
+
+/.pytest_cache/
+/.tiktoken_cache/
+
+# Scratch space and generated validation artefacts.
+/tmp/
+/__tmp_*.txt
+/__audit_*.txt
+/__core_logic.txt
+/__no_logic.txt
+/__warn.txt
+/compiled_diff.txt
+/tmp_compiled_diff.txt
+/tmp_raw_diff.txt
+
+# Runtime outputs can be large and are reproducible unless deliberately archived.
+/runs/
+/output/
+
+# Local research material and bulky artefacts kept out of the public prompt repo.
+/archive/
+/logs/
+/sources/
+/wheels/
+/*.xlsx
+/alan_prompt_ready.txt
+/ALAN_PROBE_ANALYSIS_*.md
+/REVIEW_*.txt
+/memory_review_report.txt
+/ablation_plan.txt

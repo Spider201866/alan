@@ -1,0 +1,11 @@
+* text=auto
+
+*.md text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
+Alan_DSL text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.xlsx binary

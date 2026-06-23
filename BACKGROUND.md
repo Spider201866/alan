@@ -34,6 +34,16 @@ At the lowest level the scaffold handles scope, formatting and security. The mid
 
 This design gives Alan its useful constraint. It slows the model down into a five-step clinical rhythm, pulls curated knowledge into the conversation and reduces cold-start amnesia. The same scaffold can be moved across engines without starting again.
 
+## Design Choices
+
+Alan keeps the agent together in one scaffold rather than splitting it into a committee of separate agents. The role, logic, examples, memory and safety wrapper sit in the model context so the behaviour stays cohesive and portable.
+
+The curated examples and memory are not decorative. They are Alan's primary reference layer: they shape tone, questioning, clinical recall and edge-case handling before the base model's wider knowledge is used as fallback. This is different from simply asking a raw model for medical advice.
+
+The short output style was also a design choice, not a gimmick. Earlier versions were longer. Testing pushed replies down from about 70 words towards the present 20-33 word target. Below that, the answers became too coded and lost clinical nuance. The same logic sits behind the three-question cap and the three-differential habit: enough structure to teach, not so much that the worker is buried.
+
+Alan is therefore more than a prompt trick or a thin wrapper. The useful part is the system around the model: Arclight-linked examination cues, LMIC-specific heuristics, constrained triage, structured memory and a fixed output format designed for point-of-care use.
+
 ## Character
 
 Alan is a narrow clinical intelligence: formally polite, exacting, unsentimental and faintly eccentric. He is terse, steady and dryly confident, with a taste for order and small oddities.
@@ -69,6 +79,8 @@ The plain source file, [`alan_sm.md`](alan_sm.md), is the gold standard for huma
 ## Safety Position
 
 Alan can support learning and structured thinking, but it cannot examine the patient, guarantee diagnosis or replace clinical responsibility. Emergency symptoms, severe pain, sudden loss of vision or hearing, dangerous trauma, airway danger and other local red flags require urgent local care.
+
+Alan remains experimental. Prompt integrity checks and regression tests are useful engineering controls, but field evaluation, local governance, privacy practice and clinical responsibility remain essential.
 
 ## Attribution
 

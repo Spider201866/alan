@@ -1,16 +1,16 @@
 # Background
 
-Alan began with a practical problem: eye, ear and skin knowledge is large, training time is short and expert help is unevenly distributed. The project asks how far useful clinical structure can be compressed without losing safety, nuance or the worker's next action.
+Alan began as a compression problem: how do you carry enough eye, ear and skin knowledge into a clinic where time is short, tools are basic and specialist help may be absent?
 
-The result is a scaffold, not a product. Alan sits above the chosen language model engine: the engine generates language; Alan supplies the clinical role, memory, safety logic, stepwise workflow and voice. The scaffold can be inspected, versioned, compiled and run across model providers.
+The answer is not another general chatbot. Alan is a scaffold that sits above a language model engine. The engine generates language; Alan supplies the clinical role, memory, safety logic, stepwise workflow and voice. The scaffold can be inspected, versioned, compiled and moved between model providers.
 
-The design is deliberately not neutral. Alan favours brevity, safety logic, LMIC-aware assumptions, explainable steps and practical point-of-care use. The target is not a general medical chatbot. The target is a concise assistant for workers who need one clear next move.
+The design is deliberately not neutral. Alan favours brevity, LMIC-aware assumptions, explainable steps, low-cost tool use and practical point-of-care action. It is built for workers who need one clear next move.
 
 ## Clinical Problem
 
-Alan is shaped around missing basics: staff, kit, power, specialist support, teaching time and reliable point-of-care reference. Eye, ear and skin problems are common, but practical expertise is often thinly spread. A worker may have a queue, a low-cost tool and no immediate specialist to ask.
+Eye, ear and skin care often fails because the basics are missing: staff, kit, power, specialist support, teaching time and reliable reference. A worker may have a queue, a low-cost tool and no one experienced to ask.
 
-The aim is therefore not a high-tech image-first system. Alan starts with ordinary clinical work: careful questions, visible signs, safety checks, differentials and a practical next step. It is meant to lift basic examination and reasoning, especially when paired with low-cost tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
+Alan starts there. It begins with ordinary clinical work rather than photographs or scans: careful questions, visible signs, safety checks, differentials and a practical next step. It is meant to lift basic examination and reasoning, especially when paired with tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
 
 ## Origins
 
@@ -20,7 +20,7 @@ That compression instinct became the 2021-2022 Atoms project: condensed visual a
 
 The hard part remained. Concentrated information is still information. It still has to be absorbed. Learning is hard and experts are few for a reason.
 
-By late 2022, the large language model (LLM) wave had arrived. In early 2023 it became clear that careful user queries could steer output strongly and that structured system messages could produce distinctive focused agents. A March 2023 experiment inspired by the Talkie Toaster AI from Red Dwarf showed that custom memory held inside the model context window could work unexpectedly well.
+By late 2022, the large language model wave had arrived. In early 2023 it became clear that structured system messages could create focused agents. A March 2023 experiment inspired by the Talkie Toaster AI from Red Dwarf showed that custom memory held inside the model context window could work unexpectedly well.
 
 The habit of jokingly calling any AI "Alan" settled into the project in May 2023 with the first eye and ear Alan. From there the agent developed quickly: condensed Atoms material, clinical rules of thumb, a recognisable voice and strict output formatting.
 
@@ -28,19 +28,19 @@ Alan then gained stepwise differential logic, a reflective review stage, practic
 
 ## Scaffold
 
-Alan is layered. The underlying language model is the engine. Alan sits above it as a scaffold of role, memory, examples, safety rules, clinical logic and output constraints.
+Alan is layered.
 
-At the lowest level the scaffold handles scope, formatting and security. The middle holds the clinical workflow, compressed memory and eye, ear and skin frames. The top carries the persona, tone, context and small behavioural cues that make the agent feel steady rather than generic.
+The lowest layer keeps scope, formatting and security under control. The middle layer holds the clinical workflow, compressed memory and eye, ear and skin frames. The top layer carries persona, tone, context and small behavioural cues that make the agent feel steady rather than generic.
 
-This design gives Alan its useful constraint. It slows the model down into a five-step clinical rhythm, pulls curated knowledge into the conversation and reduces cold-start amnesia. The same scaffold can be moved across engines without starting again.
+This structure gives Alan its useful constraint. It slows the model into a five-step clinical rhythm, pulls curated knowledge into the conversation and reduces cold-start amnesia. The same scaffold can be moved across engines without starting again.
 
 ## Design Choices
 
-Alan keeps the agent together in one scaffold rather than splitting it into a committee of separate agents. The role, logic, examples, memory and safety wrapper sit in the model context so the behaviour stays cohesive and portable.
+Alan keeps the agent together in one scaffold rather than splitting it into a committee of separate agents. Role, logic, examples, memory and safety live together in the model context so behaviour stays cohesive and portable.
 
-The curated examples and memory are not decorative. They are Alan's primary reference layer: they shape tone, questioning, clinical recall and edge-case handling before the base model's wider knowledge is used as fallback. This is different from simply asking a raw model for medical advice.
+The curated examples and memory are not decoration. They are Alan's primary reference layer. They shape tone, questioning, clinical recall and edge-case handling before the base model's wider knowledge is used as fallback. This is different from simply asking a raw model for medical advice.
 
-The short output style was also a design choice, not a gimmick. Earlier versions were longer. Testing pushed replies down from about 70 words towards the present 20-33 word target. Below that, the answers became too coded and lost clinical nuance. The same logic sits behind the three-question cap and the three-differential habit: enough structure to teach, not so much that the worker is buried.
+The short output style is also a design choice, not a gimmick. Earlier versions were longer. Testing pushed replies down from about 70 words towards the present 20-33 word target. Below that, answers became too coded and lost clinical nuance. The same logic sits behind the three-question cap and the three-differential habit: enough structure to teach, not so much that the worker is buried.
 
 Alan is therefore more than a prompt trick or a thin wrapper. The useful part is the system around the model: Arclight-linked examination cues, LMIC-specific heuristics, constrained triage, structured memory and a fixed output format designed for point-of-care use.
 
@@ -74,7 +74,7 @@ It assumes a responsible worker is using the output, checking local context and 
 
 ## Source Structure
 
-The plain source file, [`alan_sm.md`](alan_sm.md), is the gold standard for human editing. [`Alan_DSL`](Alan_DSL) wraps the same content with stable rule IDs and ablation groups. The compiled outputs remove maintainer comments and wrapper metadata so the LLM receives only prompt-ready text.
+The plain source file, [`alan_sm.md`](alan_sm.md), is the gold standard for human editing. [`Alan_DSL`](Alan_DSL) wraps the same content with stable rule IDs and ablation groups. The compiled outputs remove maintainer comments and wrapper metadata so the language model receives only prompt-ready text.
 
 ## Safety Position
 

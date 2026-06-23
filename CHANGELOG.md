@@ -11,6 +11,7 @@
 - Corrected the public framing: Alan is a scaffold and agent layer above the language model engine.
 - Added selected background from the February 2026 Alan AI Learning Tool essay.
 - Added design-choice background from the Alan AI Assistant source document.
+- Rewrote README and background into a cleaner public narrative.
 
 ## v0.1.0 - 2026-06-23
 

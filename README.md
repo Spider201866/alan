@@ -2,71 +2,58 @@
 
 [![Validate](https://github.com/Spider201866/alan/actions/workflows/validate.yml/badge.svg)](https://github.com/Spider201866/alan/actions/workflows/validate.yml)
 
-Alan is an open-source scaffold for creating an eye, ear and skin clinical agent.
+Alan is an open-source scaffold for creating a concise eye, ear and skin clinical learning agent on top of a language model.
 
-Alan sits above any chosen language model. The model is the engine; Alan supplies the persona, memory, safety logic, clinical structure and output discipline. The same scaffold can run on top of hosted APIs, local model servers or provider-specific deployments.
+The language model is the engine. Alan is the authored layer above it: persona, memory, safety rules, clinical workflow and output discipline. It gives the engine a narrow job, a steady voice and a practical way to handle routine and urgent cases.
 
-The design is deliberately narrow: brief outputs, low-cost tool awareness and a steady point-of-care voice for low- and middle-income country (LMIC) settings and wider teaching use.
+Alan is built for LMIC point-of-care reality: limited specialist access, low-cost tools, short consultations and workers who need the next useful step. It is also useful anywhere that clear, brief and practical clinical teaching matters.
 
 Alan is not a general medical chatbot. He is a narrow clinical intelligence: formally polite, exacting, unsentimental and faintly eccentric.
 
 ![Alan overview](assets/alan-overview.png)
 
-## Safety Status
+## Use Alan
 
-Alan is a learning and support prompt. It is not a medical device, diagnostic service or emergency service. Its outputs must be checked by a responsible health worker using local protocols.
-
-Read [`SAFETY.md`](SAFETY.md) before using Alan in teaching, research or deployment.
-
-## Quick Start
-
-Clone the repository:
+Use [`alan_compiled.txt`](alan_compiled.txt) as the Alan scaffold in your system prompt or instruction prompt.
 
 ```powershell
 git clone https://github.com/Spider201866/alan.git
 cd alan
 ```
 
-Use [`alan_compiled.txt`](alan_compiled.txt) as the Alan scaffold in the system prompt or instruction prompt:
-
 ```python
 from pathlib import Path
 
-system_prompt = Path("alan_compiled.txt").read_text(encoding="utf-8")
+alan_scaffold = Path("alan_compiled.txt").read_text(encoding="utf-8")
 case = "Adult with red painful eye and reduced vision."
 
-# Send system_prompt as the Alan scaffold.
+# Send alan_scaffold as the system or instruction prompt.
 # Send case as the user message.
 ```
 
-Check the repository state:
-
-```powershell
-python validate.py
-python -m unittest tests.test_compilers
-```
-
-See [`QUICKSTART.md`](QUICKSTART.md) for editing, compiling and export workflows.
+Alan can be used with hosted APIs, local model servers or provider-specific deployments. See [`QUICKSTART.md`](QUICKSTART.md) for editing, compiling and export workflows.
 
 ## What Alan Does
 
 - Creates a consistent clinical agent on top of a chosen language model engine.
-- Gives eye, ear and skin learning support in a concise clinical style.
-- Structures routine cases around details, questions, differentials, reflection and a diagnosis plus plan.
+- Guides eye, ear and skin cases through a short five-step clinical rhythm.
 - Prioritises red flags, urgent escalation and unsafe-action stops before ordinary flow.
-- Assumes practical examination with basic tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
-- Provides the role, memory, safety logic, stepwise reasoning and output format that steer the engine.
+- Uses curated examples and compressed memory to steer tone, recall and clinical judgement.
+- Assumes practical examination with tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
+- Keeps output brief, plain and structured enough for point-of-care use.
 
 ## What Alan Does Not Do
 
 Alan does not examine the patient, guarantee diagnosis, replace clinical judgement or provide emergency care. It should not be deployed as an unsupervised patient-facing diagnosis or treatment service.
+
+Read [`SAFETY.md`](SAFETY.md) before using Alan in teaching, research or deployment.
 
 No institutional endorsement by the University of St Andrews is implied.
 
 ## Repository Map
 
 - [`alan_sm.md`](alan_sm.md): canonical human-editable source prompt.
-- [`alan_compiled.txt`](alan_compiled.txt): ready-to-use prompt text.
+- [`alan_compiled.txt`](alan_compiled.txt): ready-to-use Alan scaffold.
 - [`Alan_DSL`](Alan_DSL): DSL-wrapped source with stable IDs, TAGs and GROUPs.
 - [`Alan_dsl_complied.txt`](Alan_dsl_complied.txt): historic DSL compiled output. The spelling is retained intentionally.
 - [`Alan_dsl_compiled.txt`](Alan_dsl_compiled.txt): correctly spelt alias of the DSL compiled output.
@@ -77,9 +64,9 @@ No institutional endorsement by the University of St Andrews is implied.
 - [`validate.py`](validate.py): parity, lint and compiled-output validation.
 - [`ablation_ui.py`](ablation_ui.py): optional local UI for GROUP-based ablation experiments.
 - [`ALAN_EXPRESSIONS.md`](ALAN_EXPRESSIONS.md): expression syntax for ablation GROUP filters.
-- [`BACKGROUND.md`](BACKGROUND.md): origins, character, design principles and intended use.
-- [`SAFETY.md`](SAFETY.md): safety status, intended use and deployment cautions.
+- [`BACKGROUND.md`](BACKGROUND.md): origins, architecture, character and design principles.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md): rules for safe prompt edits.
+- [`SAFETY.md`](SAFETY.md): intended use, safety status and deployment cautions.
 - [`report.txt`](report.txt): latest local validation report.
 
 ## Validation

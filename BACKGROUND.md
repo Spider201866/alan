@@ -6,6 +6,12 @@ The result is a scaffold, not a product. Alan sits above the chosen language mod
 
 The design is deliberately not neutral. Alan favours brevity, safety logic, LMIC-aware assumptions, explainable steps and practical point-of-care use. The target is not a general medical chatbot. The target is a concise assistant for workers who need one clear next move.
 
+## Clinical Problem
+
+Alan is shaped around missing basics: staff, kit, power, specialist support, teaching time and reliable point-of-care reference. Eye, ear and skin problems are common, but practical expertise is often thinly spread. A worker may have a queue, a low-cost tool and no immediate specialist to ask.
+
+The aim is therefore not a high-tech image-first system. Alan starts with ordinary clinical work: careful questions, visible signs, safety checks, differentials and a practical next step. It is meant to lift basic examination and reasoning, especially when paired with low-cost tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
+
 ## Origins
 
 The idea predates LLMs. Around seven to eight years before the first public release, the starting question was how to distil large ophthalmic textbooks into something compact enough to carry and use. One suggestion was a set of low-cost, credit-card-sized books printed on bible-thin paper.
@@ -19,6 +25,14 @@ By late 2022, the large language model (LLM) wave had arrived. In early 2023 it 
 The habit of jokingly calling any AI "Alan" settled into the project in May 2023 with the first eye and ear Alan. From there the agent developed quickly: condensed Atoms material, clinical rules of thumb, a recognisable voice and strict output formatting.
 
 Alan then gained stepwise differential logic, a reflective review stage, practical dialogue examples, compressed memory and a role/security wrapper to keep the agent on topic. Iterative testing through 2023 and 2024 made the steering more reliable and clarified the value of temperature control, compact prompt design and close attention to clinical wording.
+
+## Scaffold
+
+Alan is layered. The underlying language model is the engine. Alan sits above it as a scaffold of role, memory, examples, safety rules, clinical logic and output constraints.
+
+At the lowest level the scaffold handles scope, formatting and security. The middle holds the clinical workflow, compressed memory and eye, ear and skin frames. The top carries the persona, tone, context and small behavioural cues that make the agent feel steady rather than generic.
+
+This design gives Alan its useful constraint. It slows the model down into a five-step clinical rhythm, pulls curated knowledge into the conversation and reduces cold-start amnesia. The same scaffold can be moved across engines without starting again.
 
 ## Character
 
@@ -39,6 +53,7 @@ The intended presence is useful rather than theatrical. Alan should feel like ma
 - **Safety first.** Red flags and urgent markers interrupt routine flow when danger signs are present.
 - **Low-cost tool context.** Alan assumes practical examination with basic tools rather than advanced imaging by default.
 - **Model portability.** Alan is the scaffold above the engine, so the underlying model can change without rewriting the clinical structure.
+- **Usable trade-offs.** Alan deliberately favours brevity over depth, speed over breadth and disciplined structure over conversational sprawl.
 - **Traceable edits.** The DSL source wraps each rule with stable metadata so changes can be reviewed cleanly.
 
 ## Intended Users

@@ -5,6 +5,7 @@
 - Added quick start, safety, contribution and citation documentation.
 - Added `validate.py` and GitHub Actions validation.
 - Added correctly spelt `Alan_dsl_compiled.txt` as an alias for the historic DSL compiled output name.
+- Recorded Alan's character note and project timeline.
 
 ## v0.1.0 - 2026-06-23
 

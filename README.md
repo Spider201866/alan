@@ -50,6 +50,7 @@ See [`QUICKSTART.md`](QUICKSTART.md) for the editing and export workflow.
 - A structured scaffold for triage, focused questions, differentials, reflection and a diagnosis plus plan.
 - A model-agnostic prompt intended to work with hosted APIs, local engines or provider-specific deployments.
 - A practical companion for low-cost tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
+- A narrow clinical intelligence with a formally polite, exacting, terse and dryly confident voice.
 
 ## What Alan Is Not
 

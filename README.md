@@ -4,7 +4,11 @@
 
 Alan is an open-source scaffold for creating a concise eye, ear and skin clinical learning agent on top of a language model.
 
-The language model is the engine. Alan is the authored layer above it: persona, memory, safety rules, clinical workflow and output discipline. It gives the engine a narrow job, a steady voice and a practical way to handle routine and urgent cases.
+Alan is a teaching and learning tool. It is not, in itself, a diagnostic product. It teaches a disciplined reasoning pattern for eye, ear and skin presentations.
+
+The language model is the engine. Alan is the authored layer above it: persona, memory, safety rules, clinical workflow and output discipline. It gives the engine a narrow job, a steady voice and a practical way to teach through routine and urgent case patterns.
+
+Models matter: a stronger model, especially one better at clinical text or image analysis, will usually make Alan smoother and more accurate. The scaffold still needs local testing. It remains the same idea: portable, editable and forkable prompt text that can run locally, on a server or through hosted APIs.
 
 Alan is built for LMIC point-of-care reality: limited specialist access, low-cost tools, short consultations and workers who need the next useful step. It is also useful anywhere that clear, brief and practical clinical teaching matters.
 
@@ -31,20 +35,22 @@ case = "Adult with red painful eye and reduced vision."
 # Send case as the user message.
 ```
 
-Alan can be used with hosted APIs, local model servers or provider-specific deployments. See [`QUICKSTART.md`](QUICKSTART.md) for editing, compiling and export workflows.
+Alan can be used with hosted APIs, local model servers or provider-specific deployments. Because it is authored as text, it is portable by design and can be edited or forked for local teaching, research or implementation needs. See [`QUICKSTART.md`](QUICKSTART.md) for editing, compiling and export workflows.
 
-## What Alan Does
+## What Alan Does as a Learning Tool
 
-- Creates a consistent clinical agent on top of a chosen language model engine.
-- Guides eye, ear and skin cases through a short five-step clinical rhythm.
-- Prioritises red flags, urgent escalation and unsafe-action stops before ordinary flow.
-- Uses curated examples and compressed memory to steer tone, recall and clinical judgement.
+These are teaching behaviours. They are not automated diagnosis.
+
+- Creates a consistent teaching agent on top of a chosen language model engine.
+- Guides eye, ear and skin case discussion through a short five-step clinical rhythm.
+- Teaches red flags, urgent escalation and unsafe-action stops before ordinary flow.
+- Uses curated examples and compressed memory to model tone, recall and clinical judgement.
 - Assumes practical examination with tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
-- Keeps output brief, plain and structured enough for point-of-care use.
+- Keeps learning output brief, plain and structured enough for point-of-care teaching.
 
 ## What Alan Does Not Do
 
-Alan does not examine the patient, guarantee diagnosis, replace clinical judgement or provide emergency care. It should not be deployed as an unsupervised patient-facing diagnosis or treatment service.
+Alan does not diagnose patients, examine the patient, authorise treatment, replace clinical judgement or provide emergency care. When Alan names a possible diagnosis or plan, that is part of a teaching sequence. Clinical responsibility remains with the worker and local system.
 
 Read [`SAFETY.md`](SAFETY.md) before using Alan in teaching, research or deployment.
 
@@ -88,7 +94,7 @@ Validation checks that:
 
 GitHub Actions runs the same validation on pushes and pull requests.
 
-## Licence And Citation
+## Licence and Citation
 
 Alan uses a split licence:
 

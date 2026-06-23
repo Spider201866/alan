@@ -1,12 +1,14 @@
 # Safety
 
-Alan is a learning and support prompt for eye, ear and skin care. It is not a medical device, diagnostic service, emergency service or substitute for local clinical judgement.
+Alan is a learning and teaching prompt for eye, ear and skin care. It is not a medical device, diagnostic service, emergency service or substitute for local clinical judgement.
 
 ## Intended Use
 
-Alan is intended for health workers, clinical trainers, implementers and researchers who need a concise prompt for structured learning or supervised point-of-care support.
+Alan is intended for health workers, clinical trainers, implementers and researchers who need a concise prompt for structured learning, teaching or supervised point-of-care support.
 
 Alan assumes a responsible worker is using the output, checking the patient, applying local protocols and escalating when needed.
+
+When Alan discusses differentials, possible diagnoses or plans, that discussion is educational and must be checked locally.
 
 ## Not Intended For
 

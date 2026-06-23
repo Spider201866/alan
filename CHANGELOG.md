@@ -12,6 +12,8 @@
 - Added selected background from the February 2026 Alan AI Learning Tool essay.
 - Added design-choice background from the Alan AI Assistant source document.
 - Rewrote README and background into a cleaner public narrative.
+- Clarified that Alan is a teaching and learning scaffold, not a diagnostic product.
+- Tightened the README and safety wording around diagnosis as a teaching sequence only.
 
 ## v0.1.0 - 2026-06-23
 

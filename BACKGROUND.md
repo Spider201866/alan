@@ -2,7 +2,7 @@
 
 Alan began as a compression problem: how do you carry enough eye, ear and skin knowledge into a clinic where time is short, tools are basic and specialist help may be absent?
 
-The answer is not another general chatbot. Alan is a scaffold that sits above a language model engine. The engine generates language; Alan supplies the clinical role, memory, safety logic, stepwise workflow and voice. The scaffold can be inspected, versioned, compiled and moved between model providers.
+The answer is not another general chatbot. Alan is a scaffold that sits above a language model engine. The engine generates language; Alan supplies the clinical role, memory, safety logic, stepwise workflow and voice. The scaffold can be inspected, versioned, compiled, moved between model providers and forked for local teaching needs.
 
 The design is deliberately not neutral. Alan favours brevity, LMIC-aware assumptions, explainable steps, low-cost tool use and practical point-of-care action. It is built for workers who need one clear next move.
 
@@ -59,7 +59,7 @@ The intended presence is useful rather than theatrical. Alan should feel like ma
 ## Design Principles
 
 - **Thirty-three words. One clear plan.** Alan aims for short replies that can be used during real clinical work.
-- **Stepwise logic.** Routine cases move through core details, focused questions, differentials, reflection and a diagnosis plus plan.
+- **Stepwise logic.** Routine cases move through core details, focused questions, differentials, reflection and a diagnosis-plus-plan teaching step.
 - **Safety first.** Red flags and urgent markers interrupt routine flow when danger signs are present.
 - **Low-cost tool context.** Alan assumes practical examination with basic tools rather than advanced imaging by default.
 - **Model portability.** Alan is the scaffold above the engine, so the underlying model can change without rewriting the clinical structure.

@@ -6,6 +6,7 @@
 - Added `validate.py` and GitHub Actions validation.
 - Added correctly spelt `Alan_dsl_compiled.txt` as an alias for the historic DSL compiled output name.
 - Recorded Alan's character note and project timeline.
+- Expanded the background with the pre-LLM origins, Atoms project and early Alan development history.
 
 ## v0.1.0 - 2026-06-23
 

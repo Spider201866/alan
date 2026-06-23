@@ -12,6 +12,10 @@ SPDX identifier: `CC-BY-SA-4.0`
 
 You may share and adapt this material, including for commercial use, provided you give appropriate credit, indicate changes and distribute adaptations under the same licence.
 
+Suggested attribution:
+
+`Alan, WJW, https://github.com/Spider201866/alan, CC BY-SA 4.0`
+
 ## Python Code And Tests
 
 The Python source code and tests are licensed under the MIT licence.

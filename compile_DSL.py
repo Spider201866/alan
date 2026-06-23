@@ -40,6 +40,8 @@ from ablation_ui_lib.dsl_analysis import parse_dsl_lines, semantic_example_facet
 from prompt_compile_core import compile_markdown_lines
 
 WRAPPER_RE = re.compile(r"^\{([^}]*)\}\s(.*)$")
+DEFAULT_OUTPUT = Path("Alan_dsl_complied.txt")
+DEFAULT_OUTPUT_ALIAS = Path("Alan_dsl_compiled.txt")
 
 # DSL.md v13-aligned display/order flow:
 # AGENT + ROLE -> LOGIC -> EXAMPLES -> MEMORY -> SECURITY
@@ -212,7 +214,7 @@ def compile_dsl_text(
     enabled_groups: set[str] | None,
     excluded_groups: set[str],
     excluded_example_facets: set[str] | None = None,
-) -> None:
+) -> str:
     lines = input_file.read_text(encoding="utf-8").splitlines()
     compiled_text = build_compiled_text(
         lines,
@@ -221,6 +223,7 @@ def compile_dsl_text(
         excluded_example_facets=excluded_example_facets,
     )
     output_file.write_text(compiled_text, encoding="utf-8")
+    return compiled_text
 
 
 def main() -> None:
@@ -236,7 +239,7 @@ def main() -> None:
     parser.add_argument(
         "-o",
         "--output",
-        default="Alan_dsl_complied.txt",
+        default=str(DEFAULT_OUTPUT),
         help="Path to compiled output file (default: Alan_dsl_complied.txt).",
     )
     parser.add_argument(
@@ -285,8 +288,11 @@ def main() -> None:
     if enabled_groups is not None and excluded_groups:
         enabled_groups = {group for group in enabled_groups if group not in excluded_groups}
 
-    compile_dsl_text(input_path, output_path, enabled_groups, excluded_groups)
+    compiled_text = compile_dsl_text(input_path, output_path, enabled_groups, excluded_groups)
     print(f"Compiled text has been written to {output_path}.")
+    if output_path == DEFAULT_OUTPUT:
+        DEFAULT_OUTPUT_ALIAS.write_text(compiled_text, encoding="utf-8")
+        print(f"Compiled alias has been written to {DEFAULT_OUTPUT_ALIAS}.")
 
 
 if __name__ == "__main__":

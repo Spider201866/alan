@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use Alan, please cite this repository."
+title: "Alan"
+version: "0.1.0"
+date-released: "2026-06-23"
+repository-code: "https://github.com/Spider201866/alan"
+url: "https://github.com/Spider201866/alan"
+license: "CC-BY-SA-4.0"
+authors:
+  - family-names: "WJW"
+abstract: "Open-source eye, ear and skin learning prompt for concise point-of-care guidance."
+keywords:
+  - "clinical education"
+  - "eye care"
+  - "ear care"
+  - "skin care"
+  - "LMIC"
+  - "LLM prompt"

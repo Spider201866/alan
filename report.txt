@@ -78,9 +78,14 @@ Canonical Group Order
 - `python -m unittest tests.test_compilers`: PASS
 - Tests run: `8`
 
+6) Automated Validation
+- `python validate.py`: PASS
+- GitHub Actions workflow added: `.github/workflows/validate.yml`
+
 Overall
 - Check 1, content parity: PASS
 - Check 2, DSL lint: PASS
 - Check 3, tag/group coverage: PASS_WITH_NOTES
 - Check 4, compiler verification: PASS
 - Check 5, compiler tests: PASS
+- Check 6, automated validation: PASS

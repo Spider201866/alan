@@ -1,16 +1,16 @@
 # Background
 
-Alan began as a compression problem: how do you carry enough eye, ear and skin knowledge into a clinic where time is short, tools are basic and specialist help may be absent?
+Alan began as a compression problem: how do you carry useful eye, ear and skin knowledge into a clinic where time is short, tools are basic and specialist help may be absent?
 
-The answer is not another general chatbot. Alan is a scaffold that sits above a language model engine. The engine generates language; Alan supplies the clinical role, memory, safety logic, stepwise workflow and voice. The scaffold can be inspected, versioned, compiled, moved between model providers and forked for local teaching needs.
+Alan is a scaffold that sits above a language model engine. The engine generates language; Alan supplies the teaching role, curated memory, safety logic, stepwise workflow and voice. The scaffold can be inspected, versioned, compiled, moved between models and forked for local teaching needs.
 
-The design is deliberately not neutral. Alan favours brevity, LMIC-aware assumptions, explainable steps, low-cost tool use and practical point-of-care action. It is built for workers who need one clear next move.
+The design is deliberately not neutral. Alan favours brevity, explainable steps and low-cost examination tools. It is shaped by constraints common in low- and middle-income country (LMIC) settings and built around one clear next teaching step.
 
 ## Clinical Problem
 
-Eye, ear and skin care often fails because the basics are missing: staff, kit, power, specialist support, teaching time and reliable reference. A worker may have a queue, a low-cost tool and no one experienced to ask.
+In many low-resource settings, eye, ear and skin care is constrained by shortages of staff, equipment, power, specialist support, teaching time and reliable reference material. A health worker may have a queue, a low-cost tool and no experienced colleague immediately available.
 
-Alan starts there. It begins with ordinary clinical work rather than photographs or scans: careful questions, visible signs, safety checks, differentials and a practical next step. It is meant to lift basic examination and reasoning, especially when paired with tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
+Alan starts with those realities. It structures case-based teaching around careful questions, observed signs, safety checks, differentials and a practical next step. It is intended to strengthen the teaching of basic examination and reasoning, especially when paired with tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
 
 ## Origins
 
@@ -18,31 +18,31 @@ The idea predates LLMs. Around seven to eight years before the first public rele
 
 That compression instinct became the 2021-2022 Atoms project: condensed visual algorithm cards for clinical settings, fieldwork or quick student revision. They were not textbook replacements and were never meant to stand in for practical training. They did show that clinical knowledge could be compressed surprisingly far, especially into a single smartphone-friendly image.
 
-The hard part remained. Concentrated information is still information. It still has to be absorbed. Learning is hard and experts are few for a reason.
+The hard part remained. Compression can make information easier to carry, but not automatically easier to understand. Learning is difficult and expertise takes time to build.
 
-By late 2022, the large language model wave had arrived. In early 2023 it became clear that structured system messages could create focused agents. A March 2023 experiment inspired by the Talkie Toaster AI from Red Dwarf showed that custom memory held inside the model context window could work unexpectedly well.
+By late 2022, the large language model wave had arrived. In early 2023 it became clear that structured system messages could create focused agents. A March 2023 experiment inspired by the Talkie Toaster AI from Red Dwarf suggested that memory held inside the model's context window could help an agent maintain a distinctive role and voice.
 
 The habit of jokingly calling any AI "Alan" settled into the project in May 2023 with the first eye and ear Alan. From there the agent developed quickly: condensed Atoms material, clinical rules of thumb, a recognisable voice and strict output formatting.
 
-Alan then gained stepwise differential logic, a reflective review stage, practical dialogue examples, compressed memory and a role/security wrapper to keep the agent on topic. Iterative testing through 2023 and 2024 made the steering more reliable and clarified the value of temperature control, compact prompt design and close attention to clinical wording.
+Alan then gained stepwise differential logic, a reflective review stage, practical dialogue examples, compressed memory and a role and safety wrapper to keep the agent on topic. Informal iterative development through 2023 and 2024 improved the consistency of the prompt and clarified the value of temperature control, compact design and close attention to clinical wording. This was prompt development, not clinical validation.
 
 ## Scaffold
 
 Alan is layered.
 
-The lowest layer keeps scope, formatting and security under control. The middle layer holds the clinical workflow, compressed memory and eye, ear and skin frames. The top layer carries persona, tone, context and small behavioural cues that make the agent feel steady rather than generic.
+The lowest layer defines scope, safety and output format. The middle layer holds the teaching workflow, compressed memory and eye, ear and skin frames. The top layer carries persona, tone, context and small behavioural cues that make the agent feel steady rather than generic.
 
-This structure gives Alan its useful constraint. It slows the model into a five-step clinical rhythm, pulls curated knowledge into the conversation and reduces cold-start amnesia. The same scaffold can be moved across engines without starting again.
+This structure gives Alan its useful constraint. It guides the model through a five-step learning rhythm and gives each new session the same reference material and behavioural frame. The scaffold can move between models without being rewritten, although its performance must be tested on each one.
 
 ## Design Choices
 
-Alan keeps the agent together in one scaffold rather than splitting it into a committee of separate agents. Role, logic, examples, memory and safety live together in the model context so behaviour stays cohesive and portable.
+Alan keeps role, logic, examples, memory and safety together in one scaffold. Keeping these elements in the same model context helps the teaching behaviour remain cohesive and portable.
 
-The curated examples and memory are not decoration. They are Alan's primary reference layer. They shape tone, questioning, clinical recall and edge-case handling before the base model's wider knowledge is used as fallback. This is different from simply asking a raw model for medical advice.
+Within each session, Alan's curated examples and memory provide an immediate reference layer. They are intended to shape tone, questioning, recall and handling of less straightforward cases while the underlying model supplies broader language and reasoning capability.
 
 The short output style is also a design choice, not a gimmick. Earlier versions were longer. Testing pushed replies down from about 70 words towards the present 20-33 word target. Below that, answers became too coded and lost clinical nuance. The same logic sits behind the three-question cap and the three-differential habit: enough structure to teach, not so much that the worker is buried.
 
-Alan is therefore more than a prompt trick or a thin wrapper. The useful part is the system around the model: Arclight-linked examination cues, LMIC-specific heuristics, constrained triage, structured memory and a fixed output format designed for point-of-care use.
+Alan is therefore an authored system around the model: Arclight-linked examination prompts, LMIC-aware teaching cues, safety escalation, structured memory and a fixed output format for concise case-based learning.
 
 ## Character
 
@@ -58,19 +58,19 @@ The intended presence is useful rather than theatrical. Alan should feel like ma
 
 ## Design Principles
 
-- **Thirty-three words. One clear plan.** Alan aims for short replies that can be used during real clinical work.
-- **Stepwise logic.** Routine cases move through core details, focused questions, differentials, reflection and a diagnosis-plus-plan teaching step.
-- **Safety first.** Red flags and urgent markers interrupt routine flow when danger signs are present.
-- **Low-cost tool context.** Alan assumes practical examination with basic tools rather than advanced imaging by default.
-- **Model portability.** Alan is the scaffold above the engine, so the underlying model can change without rewriting the clinical structure.
+- **Thirty-three words. One clear plan.** Alan aims for replies short enough for time-limited case teaching.
+- **Stepwise logic.** Routine cases move through core details, focused questions, differentials, reflection and a provisional diagnosis-and-plan discussion.
+- **Safety first.** Red flags and urgent markers interrupt the ordinary teaching flow when danger signs are present.
+- **Low-cost tool context.** Alan prompts learners to consider findings from basic examination tools rather than assuming advanced imaging.
+- **Model portability.** Alan is the scaffold above the engine, so the underlying model can change without rewriting the teaching structure. Behaviour still needs testing on each model.
 - **Usable trade-offs.** Alan deliberately favours brevity over depth, speed over breadth and disciplined structure over conversational sprawl.
 - **Traceable edits.** The DSL source wraps each rule with stable metadata so changes can be reviewed cleanly.
 
 ## Intended Users
 
-Alan is intended for health workers, clinical trainers, prompt researchers and implementers building learning tools around eye, ear and skin care.
+Alan is intended for health workers, students, clinical trainers, prompt researchers and implementers building learning tools around eye, ear and skin care.
 
-It assumes a responsible worker is using the output, checking local context and following local referral rules. It is not intended for unsupervised patient self-diagnosis.
+It assumes that a responsible teacher or health professional is checking the output against local context, examination findings and referral rules. It is not intended for unsupervised patient self-diagnosis.
 
 ## Source Structure
 
@@ -78,9 +78,9 @@ The plain source file, [`alan_sm.md`](alan_sm.md), is the gold standard for huma
 
 ## Safety Position
 
-Alan can support learning and structured thinking, but it cannot examine the patient, guarantee diagnosis or replace clinical responsibility. Emergency symptoms, severe pain, sudden loss of vision or hearing, dangerous trauma, airway danger and other local red flags require urgent local care.
+Alan can support learning and structured thinking, but it cannot examine a patient, verify the information it receives or provide a validated diagnosis. Any differential, provisional diagnosis or plan it generates is educational and must be checked locally. Emergency symptoms, severe pain, sudden loss of vision or hearing, dangerous trauma, airway danger and other local red flags require urgent local care.
 
-Alan remains experimental. Prompt integrity checks and regression tests are useful engineering controls, but field evaluation, local governance, privacy practice and clinical responsibility remain essential.
+Alan remains an experimental teaching scaffold. Prompt-integrity checks and regression tests are useful engineering controls, but they do not establish clinical safety or deployment readiness. Field evaluation, local governance, privacy practice and clinical responsibility remain essential.
 
 ## Attribution
 

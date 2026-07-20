@@ -1,6 +1,6 @@
 # Quick Start
 
-This guide is for people who want to try Alan with a teaching case, edit the prompt or export a prompt-ready file.
+This guide covers three common tasks: trying Alan with a teaching case, editing the scaffold and exporting prompt-ready text.
 
 ## 1. Get the Repository
 
@@ -13,7 +13,7 @@ Alan currently uses only the Python standard library for its compiler and valida
 
 ## 2. Use Alan for a Teaching Case
 
-Alan is the scaffold and the language model is the engine. Use [`alan_compiled.txt`](alan_compiled.txt) as the system or instruction prompt in your chosen model interface.
+The language model supplies the engine; Alan supplies the scaffold. Load [`alan_compiled.txt`](alan_compiled.txt) as the system or instruction prompt in your chosen interface.
 
 Minimal provider-agnostic shape:
 
@@ -27,7 +27,7 @@ teaching_case = "Child with itchy ear, discharge and reduced hearing."
 # Pass teaching_case as the user message.
 ```
 
-The exact API call depends on your provider. Alan can move between hosted APIs, local hardware and private servers, but behaviour will vary with the model, quantisation and settings. Test each deployment locally.
+The exact API call depends on the provider. The same scaffold can move between hosted APIs, local hardware and private servers, but behaviour will vary with model choice, quantisation and settings. Test every deployment locally.
 
 Use fictional or properly de-identified teaching cases. Read [`SAFETY.md`](SAFETY.md) before using Alan with real case material or in teaching connected to clinical care.
 

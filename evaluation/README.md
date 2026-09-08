@@ -48,7 +48,7 @@ Recorded consultations between **Alan** and a simulated **health worker**, asses
 
 | Included files | Approximate size |
 | --- | --- |
-| Complete package | 1.77 MB |
+| **Complete package** | **1.77 MB** |
 | Excel case bank | 98 kB |
 | All six prompts | 132 kB |
 | Runner, filter and scoring code | 234 kB |

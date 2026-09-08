@@ -15,13 +15,23 @@ Use British English without Oxford commas.
 - Do not publish runs/, work/, credentials, personal settings or unrelated files. Only the approved three-case demo in docs/demo/ is bundled. Audit replacement demos for local paths and credentials; preserve recorded replies and scores.
 - This release uses version 1 for harness components and v0.2.0 for Alan. Update PROVENANCE.json checksums after package changes; preserve historical run manifests.
 
+## Setup progress messages
+
+Send these as separate chat updates at the relevant stage, not together in one message:
+
+1. Before downloading and installing: **⏳ Downloading and installing… about a minute.** Use that estimate only when Python and Codex are already available; otherwise explain the additional setup.
+2. Once installation succeeds, before checking: **✓ Installed. Running checks…**
+3. After the checks pass, send the full Ready message below, including the case-selection bullets.
+
+Do the work between updates so the user can follow progress. Do not add artificial delays, invent progress or announce success early. If a stage takes longer, give a brief factual update. Report any blocker instead of advancing to the next message.
+
 ## Post-install message
 
 After installation and the documented checks pass, use the message below. Read the installed release from `VERSION` and its release date from `PROVENANCE.json`; never substitute today's date or imply checks passed when they did not. This release, `1.0.0`, is displayed as **Version 1.00**. For later releases, use their actual version and date. If setup is incomplete, report the remaining issue instead. If the user already selected cases, proceed within that scope rather than asking again.
 
-> **Alan evaluation harness · Version 1.00 · 8 September 2026**
+> ✓ **Ready — Alan evaluation harness · Version 1.00 · 8 September 2026**
 >
-> Installed and checked. **What would you like to test?**
+> **What would you like to test?**
 >
 > - All **250 cases**
 > - **Eye**, **ENT** or **dermatology** cases

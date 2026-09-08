@@ -18,7 +18,7 @@ def compile_text_file(input_file: str | Path, output_file: str | Path) -> None:
     input_path = Path(input_file)
     output_path = Path(output_file)
     compiled_text = build_compiled_text(input_path.read_text(encoding="utf-8").splitlines())
-    output_path.write_text(compiled_text, encoding="utf-8")
+    output_path.write_text(compiled_text, encoding="utf-8", newline="\n")
     print(f"Compiled text has been written to {output_path}.")
 
 

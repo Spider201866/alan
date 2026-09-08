@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use Alan, please cite this repository."
 title: "Alan"
-version: "0.1.0"
-date-released: "2026-06-23"
+version: "0.2.0"
+date-released: "2026-09-08"
 repository-code: "https://github.com/Spider201866/alan"
 url: "https://github.com/Spider201866/alan"
 license: "CC-BY-SA-4.0"

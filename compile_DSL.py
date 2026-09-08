@@ -222,7 +222,7 @@ def compile_dsl_text(
         excluded_groups=excluded_groups,
         excluded_example_facets=excluded_example_facets,
     )
-    output_file.write_text(compiled_text, encoding="utf-8")
+    output_file.write_text(compiled_text, encoding="utf-8", newline="\n")
     return compiled_text
 
 
@@ -291,7 +291,7 @@ def main() -> None:
     compiled_text = compile_dsl_text(input_path, output_path, enabled_groups, excluded_groups)
     print(f"Compiled text has been written to {output_path}.")
     if output_path == DEFAULT_OUTPUT:
-        DEFAULT_OUTPUT_ALIAS.write_text(compiled_text, encoding="utf-8")
+        DEFAULT_OUTPUT_ALIAS.write_text(compiled_text, encoding="utf-8", newline="\n")
         print(f"Compiled alias has been written to {DEFAULT_OUTPUT_ALIAS}.")
 
 

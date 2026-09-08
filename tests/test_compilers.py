@@ -27,6 +27,16 @@ class CompilerTests(unittest.TestCase):
             stripped_text += "\n"
         self.assertEqual(stripped_text, gold_text)
 
+    def test_marker_repetition_is_limited_to_a_new_episode_state(self) -> None:
+        repo_root = Path(__file__).resolve().parents[1]
+        prompt = (repo_root / "alan_sm.md").read_text(encoding="utf-8")
+        self.assertIn("use the highest-risk marker once per episode; never stack", prompt)
+        self.assertIn(
+            "Repeat only after refusal/downplay or escalation to a higher tier",
+            prompt,
+        )
+        self.assertNotIn("repeat for refusal, downplay or new/worsening danger", prompt)
+
     def test_strip_inline_comment_drops_comments_and_preserves_urls(self) -> None:
         self.assertIsNone(strip_inline_comment("// full line comment"))
         self.assertIsNone(strip_inline_comment("\ufeff// full line comment"))
@@ -72,6 +82,7 @@ class CompilerTests(unittest.TestCase):
                 output_path.read_text(encoding="utf-8"),
                 "## H\nLine one\n- Bullet\n\n### H2\ntext\n",
             )
+            self.assertNotIn(b"\r\n", output_path.read_bytes())
 
     def test_dsl_build_compiled_text_strips_wrappers_and_preserves_structure(self) -> None:
         lines = textwrap.dedent(
@@ -111,6 +122,7 @@ class CompilerTests(unittest.TestCase):
                 output_path.read_text(encoding="utf-8"),
                 "# AGENT\nAgent line\n## LOGIC\n",
             )
+            self.assertNotIn(b"\r\n", output_path.read_bytes())
 
     def test_export_prompt_from_markdown(self) -> None:
         sample = textwrap.dedent(

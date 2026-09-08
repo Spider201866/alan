@@ -54,3 +54,15 @@ The model prompts and clinical scoring rules were not changed for packaging. Pub
 ## Remaining scope
 
 The fresh installation was exercised on Windows. The documented macOS and Linux commands have not been tested on those operating systems. Optional video capture and FFmpeg conversion were not retested; the verified export path is self-contained HTML. A full new 250-case model run has not been performed for this release package.
+
+## Fresh GitHub installation check
+
+A separate shallow clone of published commit `a8c3542` was installed on Windows, following this README and AGENTS.md. A new virtual environment used only the declared dependencies; the existing signed-in Codex CLI was reused.
+
+- All 36 Python tests and the JavaScript replay tests passed.
+- Live preflight passed. EYE-001 completed in six Alan replies, with accepted diagnosis and management.
+- Saved-run validation passed with no errors or warnings.
+- The separate viewer displayed the run with Follow latest on. Its exported HTML opened offline and started playback.
+- Two setup clarifications resulted: use `py -3` when Windows resolves `python` to the Store shortcut, and keep the configured viewer port consistent with run links.
+
+No prompt, scoring or runtime edits were needed. This is a Windows installation check using existing Codex sign-in, not a clean operating-system installation or a full clinical evaluation.

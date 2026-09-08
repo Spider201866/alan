@@ -84,8 +84,8 @@ Install Python and Codex first, then:
 ```powershell
 git clone https://github.com/Spider201866/alan.git
 cd alan/evaluation
-python --version
-python -m venv .venv
+py -3 --version
+py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 Get-Command codex
@@ -109,6 +109,8 @@ codex login
 python harness.py check
 ```
 
+On Windows, `py -3` avoids the Microsoft Store `python` shortcut. If the Python launcher is unavailable but `python --version` reports Python 3.11+, use `python` instead of `py -3` for environment creation.
+
 Use the virtual environment in **each terminal**. Run the activation command again after opening a new terminal in `evaluation/`. If already signed in, `codex login status` checks the account instead of signing in again.
 
 This release was checked with Codex CLI **0.144.6**. `check` verifies the required isolation flags and sign-in status without calling a model. It reports an incompatible CLI rather than weakening isolation. Use the [official installation guide](https://learn.chatgpt.com/docs/codex/cli) for your operating system.
@@ -122,7 +124,7 @@ This release was checked with Codex CLI **0.144.6**. `check` verifies the requir
 | PowerShell blocks activation | Activation is optional. Use `.\.venv\Scripts\python.exe` in place of `python`, including for pip and harness commands. No execution-policy change is needed. |
 | Codex cannot be found | Use `Get-Command codex` on Windows or `command -v codex` on macOS/Linux. Install the CLI or add its installation directory to PATH, then reopen the terminal. The desktop app alone does not prove the command is available. |
 | Sign-in or model access fails | Check `codex login status`, sign in if needed and inspect `config.json`. Use an explicitly selected available model; do not silently substitute one. |
-| Port 8765 is busy | Use `python harness.py view --port 8767` and open the printed address. |
+| Port 8765 is busy | Use `python harness.py view --port 8767` and keep that address open. For consistent links from run commands too, set `viewer_port` in `config.local.json` and use `--config config.local.json` for both commands. |
 | Copy report does not work | Check browser clipboard permissions. The native Outlook helper is Windows-only; browser copying has fallbacks. If copying is blocked, use Export HTML. |
 | MP4 conversion is unavailable | Install FFmpeg and verify `ffmpeg -version` in the server's terminal. HTML export remains available without it. |
 

@@ -11,7 +11,7 @@ Recorded consultations between **Alan** and a simulated **health worker**, asses
 <a href="https://spider201866.github.io/alan/"><strong>▶ Watch the demo</strong></a><br>
 3 cases · Autoplays<br>
 <em>No installation needed.</em><br><br>
-<a href="https://github.com/Spider201866/alan/raw/refs/heads/main/evaluation/docs/demo/index.html">Download HTML player</a>
+<a href="https://spider201866.github.io/alan/download.html">Download HTML player</a>
 </td>
 </tr>
 </table>

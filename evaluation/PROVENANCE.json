@@ -79,8 +79,8 @@
       "bytes": 4292
     },
     "README.md": {
-      "sha256": "21173e6acb555ab9e045dd393d3bdf1efc2bb19b9239837d512c88efb61a0a40",
-      "bytes": 12522
+      "sha256": "5bdd0a6969cd80d4002472d047201d4c1a80233a822a5a5766182ccd811a9fb9",
+      "bytes": 12483
     },
     "requirements.txt": {
       "sha256": "5ab8a239c1418483ead11ccd73008173fdd3af6ae97f912357ede24da823b30a",
@@ -236,6 +236,10 @@
     "docs/demo/index.html": {
       "sha256": "e30d5f40f80ce3cccd9cf7cf12d9db5379f3c998ff52baffb691e88ab6a2ccfb",
       "bytes": 520089
+    },
+    "docs/demo/download.html": {
+      "sha256": "947c8eebdce68224ea557d4780912424d6f45e27dc204f6016a6efce1eff58f1",
+      "bytes": 779
     }
   }
 }

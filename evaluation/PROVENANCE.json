@@ -79,8 +79,8 @@
       "bytes": 4292
     },
     "README.md": {
-      "sha256": "ff5b1c03d099e0242d747fd6223e07f7794697a0e7fdfe8e23cfc8839fccdbab",
-      "bytes": 8344
+      "sha256": "a8a7f37bd09bc6756c0a50e2e420442b9177f23544259567ca66f3de5f946105",
+      "bytes": 12394
     },
     "requirements.txt": {
       "sha256": "5ab8a239c1418483ead11ccd73008173fdd3af6ae97f912357ede24da823b30a",
@@ -220,6 +220,18 @@
       "source_sha256": "4c75201ef700813a14ac8ef42869f8d0ba2082bc0149ed875c48b51e0088c345",
       "sha256": "e48d8b49b08c2c5ecf44ef2bcc473879f3e4b704d0b27a77038b897cd75ee44e",
       "bytes": 14769
+    },
+    "CLAUDE.md": {
+      "sha256": "ddd28fe71a5d3404fbe685a513264411882f91537d520aa1e565018cf6fbbbdb",
+      "bytes": 271
+    },
+    "docs/runner-map.svg": {
+      "sha256": "f395ebe9de999e2ff77edfdfa89fcf8a0eefcb69e1aef2f0a4910b132130e8c0",
+      "bytes": 1871
+    },
+    "docs/viewer.png": {
+      "sha256": "373f00c9353ce5ca4832c6f101b81f9ef169cea3505d77d841e7243ddaeaaf5b",
+      "bytes": 210856
     }
   }
 }

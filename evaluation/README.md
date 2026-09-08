@@ -2,43 +2,107 @@
 
 **Version 1.0.0 · 8 September 2026 · Tested on Windows**
 
-Run recorded consultations between Alan and a simulated health worker, then assess Alan with a separate judge. The viewer shows the dialogue, worker facts, scores and replay controls.
+Recorded consultations between **Alan** and a simulated **health worker**, assessed by a separate **judge**. Includes a 250-case Excel bank, live viewer and offline replay.
 
-The package includes **200 clinical cases and 50 challenges** in [Excel](data/cases.xlsx), Alan **v0.2.0** and the selected worker and judge prompts. Each harness component starts at **version 1**. Earlier development numbers remain only in the technical provenance record.
+<img src="docs/runner-map.svg" width="520" alt="Runner map: judge above, patient and health worker on the left, Alan on the right, with dialogue arrows between them.">
 
-## Start here
+*The case filter controls the worker's available facts. Alan receives the spoken replies. The runner records the exchange and the judge assesses Alan.*
 
-You need Python **3.11 or later**. New evaluations also need the [Codex CLI](https://learn.chatgpt.com/docs/codex/cli), a signed-in account and access to the models in `config.json`. Model calls consume the account's usage allowance. A web browser is enough to open an exported HTML replay.
+## Quick start for humans and coding agents
 
-```text
-git clone https://github.com/Spider201866/alan.git
-cd alan/evaluation
-python -m venv .venv
-```
+**Codex, Claude Code and other coding agents: start here.** Any agent can help install and operate the package; **the model-calling backend currently requires the Codex CLI**, regardless of which agent helps you.
 
-On **Windows PowerShell**:
+1. Work inside `evaluation/`. Read [AGENTS.md](AGENTS.md) and [the verification record](VERIFICATION.md). [CLAUDE.md](CLAUDE.md) points to the same instructions.
+2. Follow [installation](#installation), then run `python harness.py check` and [the offline tests](#tests). These do not call models.
+3. With live evaluation authorised, run `python harness.py preflight` to check the model routes.
+4. Start `python harness.py view`, open **http://127.0.0.1:8765/** and keep **Follow latest on**.
+5. In a second terminal using the same virtual environment, run `python harness.py run --cases EYE-001 --name quick-check`.
+6. Inspect the recording, then use [run options](#run-cases), [export](#recording-replay-and-export) or [recovery commands](#stop-recover-and-inspect).
+
+**Need help?** [Setup troubleshooting](#setup-troubleshooting) · [Models](#check-the-model-routes) · [Files](#files) · [Tests](#tests)
+
+## What is included
+
+- **Alan v0.2.0** — the compiled prompt used by the underlying LLM.
+- **Health worker and case filter v1** — short replies from authorised patient facts.
+- **Runner and recorder v1** — fresh case conversations, recovery and saved events.
+- **Judges and scorers v1** — clinical assessment, challenge objectives and a separate worker audit.
+- **Viewer v1** — live dialogue, scores, worker facts, repeat groups and replay up to ×1000.
+- **Excel case bank v1** — 100 eye, 50 ENT, 50 skin and 50 challenge cases, with all challenge guidance in **Extra 50**.
+
+![Alan viewer showing the score summary, runner map, worker facts, case list and recorded dialogue](docs/viewer.png)
+
+*Actual three-case installation check on Windows, with an eye case selected. This screenshot is a UI example, not a 250-case performance claim.*
+
+### Package size
+
+| Included files | Approximate size |
+| --- | --- |
+| Complete package | 1.21 MB |
+| Excel case bank | 98 kB |
+| All six prompts | 132 kB |
+| Runner, filter and scoring code | 234 kB |
+| Viewer, replay scripts and bundled font | 458 kB |
+| Runner diagram and viewer screenshot | 213 kB |
+
+Approximate uncompressed file sizes; kB = 1,000 bytes and MB = 1,000,000 bytes. These cover `evaluation/` only. Python, Codex, the virtual environment, Git history and generated recordings are additional and vary by installation. **No model weights are bundled.**
+
+## Installation
+
+**Required:** Git to clone the repository, **Python 3.11+**, a browser and the [Codex CLI](https://learn.chatgpt.com/docs/codex/cli) for new evaluations. Sign in to Codex and ensure your account has access to the models in `config.json`. Model calls consume the account's usage allowance.
+
+**Optional:** Node for the JavaScript player tests or an npm-based Codex installation; **FFmpeg** for MP4 conversion. Neither FFmpeg nor a Node server is needed for HTML replay. Opening an exported HTML file needs only a browser.
+
+### Windows PowerShell — tested
+
+Install Python and Codex first, then:
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe harness.py check
+git clone https://github.com/Spider201866/alan.git
+cd alan/evaluation
+python --version
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+Get-Command codex
+codex --version
+codex login
+python harness.py check
 ```
 
-On **macOS or Linux** (not yet tested): use `python3 -m venv .venv` to create the environment if `python` is unavailable, then:
+### macOS or Linux — not yet tested
 
 ```sh
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python harness.py check
+git clone https://github.com/Spider201866/alan.git
+cd alan/evaluation
+python3 --version
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
+command -v codex
+codex --version
+codex login
+python harness.py check
 ```
 
-The examples below use `python`. Use the Python inside this virtual environment, or activate it first.
+Use the virtual environment in **each terminal**. Run the activation command again after opening a new terminal in `evaluation/`. If already signed in, `codex login status` checks the account instead of signing in again.
 
-Install Codex using the official instructions and run `codex login` if needed. This release was checked with Codex CLI **0.144.6**. `check` verifies the required isolation flags and sign-in status without calling a model. It reports an incompatible CLI rather than weakening the isolation settings.
+This release was checked with Codex CLI **0.144.6**. `check` verifies the required isolation flags and sign-in status without calling a model. It reports an incompatible CLI rather than weakening isolation. Use the [official installation guide](https://learn.chatgpt.com/docs/codex/cli) for your operating system.
 
-## Platform notes
+### Setup troubleshooting
 
-Windows installation and the HTML viewer have been tested. macOS and Linux still need a native installation check: Python and its virtual-environment support, the Codex executable on PATH, account sign-in and browser clipboard permissions. An agent can investigate setup failures and run the included tests, but compatibility should be confirmed on the target operating system.
+| Problem | What to check |
+| --- | --- |
+| Python is missing or too old | Install Python 3.11+ and reopen the terminal. On Windows, `py -3 --version` checks an available Python launcher. |
+| Linux cannot create `.venv` | Install your distribution's Python virtual-environment/ensurepip support, then repeat the environment command. |
+| PowerShell blocks activation | Activation is optional. Use `.\.venv\Scripts\python.exe` in place of `python`, including for pip and harness commands. No execution-policy change is needed. |
+| Codex cannot be found | Use `Get-Command codex` on Windows or `command -v codex` on macOS/Linux. Install the CLI or add its installation directory to PATH, then reopen the terminal. The desktop app alone does not prove the command is available. |
+| Sign-in or model access fails | Check `codex login status`, sign in if needed and inspect `config.json`. Use an explicitly selected available model; do not silently substitute one. |
+| Port 8765 is busy | Use `python harness.py view --port 8767` and open the printed address. |
+| Copy report does not work | Check browser clipboard permissions. The native Outlook helper is Windows-only; browser copying has fallbacks. If copying is blocked, use Export HTML. |
+| MP4 conversion is unavailable | Install FFmpeg and verify `ffmpeg -version` in the server's terminal. HTML export remains available without it. |
 
-The optional native Outlook clipboard helper is Windows-only. Browser clipboard fallbacks remain available. Optional MP4 conversion needs FFmpeg; HTML replay does not.
+macOS/Linux installation and optional video conversion still need testing on those systems. An agent can diagnose setup issues and run the supplied checks; it should verify the result on the target operating system.
 
 ## Check the model routes
 
@@ -140,10 +204,12 @@ These are deliberately challenging synthetic cases. Any changes to prompts, case
 | `runtime/` | Runner, case filter, scoring, recording and validation |
 | `viewer/` | Viewer, replay player and offline HTML exporter |
 | `tests/` | Offline regression checks |
+| `docs/` | Runner map and viewer screenshot |
+| `AGENTS.md` / `CLAUDE.md` | Agent instructions and Claude Code entry point |
 | `PROVENANCE.json` | Release checksums and development-source mapping |
 | `VERIFICATION.md` | Checks performed on this public package |
 
-No old run folders, experiment launchers, account credentials or model outputs are included. Generated runs and local settings are ignored by Git. Keep results separate from the published package.
+No old run folders, experiment launchers, account credentials or raw model-output files are included. The screenshot shows an excerpt from the installation check. Generated runs and local settings are ignored by Git. Keep results separate from the published package.
 
 ## Tests
 
@@ -153,10 +219,6 @@ node tests/test_replay_core.cjs
 ```
 
 Node is needed only for the player tests and whichever Codex installation method you choose. The viewer itself has no build step or Node server.
-
-## For coding agents
-
-Read this file and `AGENTS.md`. Run `check`, then the offline tests. Use `preflight` before an authorised live evaluation. Open the viewer before starting a run. Preserve the exact recorded inputs and keep **Follow latest on**. Never treat a proposed prompt edit, a new model route or corrected scores as an unchanged experiment.
 
 ## Licence
 

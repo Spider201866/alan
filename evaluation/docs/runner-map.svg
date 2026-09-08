@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="290" viewBox="0 0 560 290" role="img" aria-labelledby="title desc">
+<title id="title">Alan evaluation runner map</title>
+<desc id="desc">Patient facts pass through the case filter to the health worker on the left. The worker exchanges replies with Alan on the right. The judge above assesses Alan. The runner records the exchange.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10" fill="#76a8c1"/></marker></defs>
+<rect width="560" height="290" rx="16" fill="#071119"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<rect x="205" y="20" width="150" height="70" rx="13" fill="#231d35" stroke="#82699b"/>
+<text x="280" y="49" fill="#f1f5fa" font-size="19" font-weight="700">Judge</text>
+<text x="280" y="72" fill="#c8b7e0" font-size="13">Assesses Alan</text>
+<path d="M280 193 V104" stroke="#76a8c1" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="30" y="157" width="180" height="107" rx="13" fill="#112b3b" stroke="#517a91"/>
+<text x="120" y="181" fill="#e1edf5" font-size="14" font-weight="700">Patient / case facts</text>
+<path d="M31 194 H209 V221 H31Z" fill="#294758"/>
+<text x="120" y="212" fill="#dceaf3" font-size="13" font-style="italic">Case filter</text>
+<text x="120" y="246" fill="#f1f5fa" font-size="17" font-weight="700">Health worker</text>
+<path d="M219 231 H341" stroke="#76a8c1" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="280" y="219" fill="#aac5d6" font-size="12">Dialogue</text>
+<rect x="350" y="157" width="180" height="107" rx="13" fill="#17365c" stroke="#6388b0"/>
+<text x="440" y="204" fill="#f1f5fa" font-size="24" font-weight="700">Alan</text>
+<text x="440" y="231" fill="#bcd4ef" font-size="14">Prompt + LLM</text>
+</g></svg>

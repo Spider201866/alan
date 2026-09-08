@@ -14,3 +14,20 @@ Use British English without Oxford commas.
 - Run python -m unittest discover -s tests and node tests/test_replay_core.cjs after relevant changes. Include a browser check for viewer or export changes.
 - Do not publish runs/, work/, credentials, personal settings or unrelated files. Only the approved three-case demo in docs/demo/ is bundled. Audit replacement demos for local paths and credentials; preserve recorded replies and scores.
 - This release uses version 1 for harness components and v0.2.0 for Alan. Update PROVENANCE.json checksums after package changes; preserve historical run manifests.
+
+## Post-install message
+
+After installation and the documented checks pass, use the message below. Read the installed release from `VERSION` and its release date from `PROVENANCE.json`; never substitute today's date or imply checks passed when they did not. This release, `1.0.0`, is displayed as **Version 1.00**. For later releases, use their actual version and date. If setup is incomplete, report the remaining issue instead. If the user already selected cases, proceed within that scope rather than asking again.
+
+> **Alan evaluation harness · Version 1.00 · 8 September 2026**
+>
+> Installed and checked. **What would you like to test?**
+>
+> - All **250 cases**
+> - **Eye**, **ENT** or **dermatology** cases
+> - The **50 challenge cases**
+> - Specific cases—or browse the spreadsheet first
+>
+> Tell me your selection, and I’ll run it, record it and show you the results in the viewer.
+
+Keep the invitation short and accept plain-English selections. Resolve these against the installed spreadsheet before running; clarify ambiguous selections without asking the user to write commands.

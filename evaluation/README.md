@@ -25,7 +25,13 @@ The **250-case Excel bank supplies the patients**. A simulated **health worker**
 </tr>
 </table>
 
-*The filter selects available worker facts. Alan hears the replies; the runner records them and the judge assesses Alan.*
+### How the simulation works
+
+- **Patient and health worker:** the 250-case bank represents the patient in front of the worker. Asking the patient or examining them means consulting the recorded case facts. The **filter** supplies those facts while hiding the reference diagnosis and assessment guidance.
+- **Realistic limits:** the worker has basic training, limited resources and limited English. Replies use simple, sometimes broken English: **at most eight words and up to two requested facts**. The worker can miss parts of a question or lack a finding, but must not invent an answer.
+- **Alan:** independently works out the diagnosis and plan from the spoken replies. He asks questions to uncover the facts, aiming for **five replies**. The runner permits four for a completed consultation and has a **seven-reply hard limit**. Emergencies can end earlier; the required clinical stages are assessed separately from reply count.
+- **Judge:** independently assesses the recorded dialogue. A separate worker audit checks fidelity to the case facts. The runner records the exchange for replay.
+
 
 ## Agent setup steps
 

@@ -24,6 +24,14 @@ The **250-case Excel bank supplies the patients**. A simulated **health worker**
 </tr>
 </table>
 
+> [!IMPORTANT]
+> **🔴 Installed—what next? Tell your agent what to test.**
+>
+> - **Choose a run:** “Run all 250 cases”, “Run the 100 eye cases”, “Run the 50 dermatology cases” or “Run 50 mixed cases”. Every run is recorded; ask the agent to show it in the viewer.
+> - **Browse first:** “Show me the [patient spreadsheet](data/cases.xlsx) and help me choose cases.” You can select individual cases, all 50 ENT cases or the 50 challenges.
+>
+> **Agents:** after the installation check, ask “What would you like to test?” For a count-only request, clarify the case group or selection before running. Translate the selection into case IDs; see [run commands](#run-cases).
+
 ### How the simulation works
 
 - **Patient and health worker:** asking or examining the simulated patient means consulting recorded case facts. The **filter** supplies these while hiding the reference diagnosis and assessment guidance.

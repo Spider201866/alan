@@ -35,8 +35,8 @@
       "bytes": 66
     },
     "AGENTS.md": {
-      "sha256": "fb8cf12857b51edb9fe3cbd19269d5f07c829f6e0c8a592bf89b476e90cfb205",
-      "bytes": 1748
+      "sha256": "97c6ee37ec5a5941b0bb3a557118e29afefc48c00751c62a5a7daa80fa2f6e01",
+      "bytes": 2026
     },
     "config.json": {
       "sha256": "6c890442cf8c7fde598466a5fd77fba1aa43ed1dcd27a69ac55396bfa95afd39",
@@ -79,8 +79,8 @@
       "bytes": 4292
     },
     "README.md": {
-      "sha256": "b1aff3c9e63c383798899fe9891474db037a2c95543cc06c8079c686f8bc9004",
-      "bytes": 13030
+      "sha256": "1bed235ec778455d10dfe2dba94e52b429642d1f6e9a2681a6bea1fcbd9d458e",
+      "bytes": 13726
     },
     "requirements.txt": {
       "sha256": "5ab8a239c1418483ead11ccd73008173fdd3af6ae97f912357ede24da823b30a",

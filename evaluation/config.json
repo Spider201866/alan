@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "alan_version": "0.2.0",
+  "models": {
+    "alan": {
+      "name": "gpt-5.6-sol",
+      "reasoning": "medium"
+    },
+    "health_worker": {
+      "name": "gpt-5.6-terra",
+      "reasoning": "medium"
+    },
+    "judge": {
+      "name": "gpt-5.6-sol",
+      "reasoning": "high"
+    }
+  },
+  "concurrency": 1,
+  "timeouts": {
+    "alan": 180,
+    "health_worker": 120,
+    "judge": 180
+  },
+  "runs_directory": "runs",
+  "viewer_port": 8765
+}

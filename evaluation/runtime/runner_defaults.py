@@ -1,0 +1,10 @@
+"""Shared default model route for the Alan dialogue runner and monitor."""
+
+MODEL = "gpt-5.6-sol"
+REASONING = "medium"
+WORKER_MODEL = "gpt-5.6-terra"
+WORKER_REASONING = "medium"
+JUDGE_MODEL = "gpt-5.6-sol"
+JUDGE_REASONING = "high"
+MODEL_TRANSPORT = "codex"
+RUNNER_VERSION = "alan-runner-v1"

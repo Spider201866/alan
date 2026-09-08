@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "worker_protocol_difference": {
+      "type": "string",
+      "enum": [
+        "none",
+        "minor",
+        "material"
+      ]
+    },
+    "worker_protocol_reason": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "worker_protocol_difference",
+    "worker_protocol_reason",
+    "evidence"
+  ],
+  "additionalProperties": false
+}

@@ -47,6 +47,10 @@ Authored as text, Alan can run through hosted APIs, on local hardware or on priv
 
 Portability does not mean identical behaviour. Every deployment inherits the capabilities and limitations of its underlying model. Stronger models may improve fluency and clinical reasoning, but performance still varies with model choice, quantisation and settings. Local testing remains essential.
 
+## Evaluation harness
+
+The self-contained [evaluation harness](evaluation/README.md) includes a 250-case Excel bank, simulated health worker, separate judges, recorder and browser viewer. Follow its README to install it, run cases and export an offline HTML replay. The harness starts at **version 1** and includes Alan **v0.2.0**.
+
 ## What Alan Does as a Learning Tool
 
 Alan turns the underlying model into a learning tool that:

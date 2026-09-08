@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "alan_primary_diagnosis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "diagnosis_correct": {
+      "type": "boolean"
+    },
+    "equivalence_used": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_sufficient_before_differentials": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "serious_unsafe_advice": {
+      "type": "boolean"
+    },
+    "observed_urgency_window": {
+      "type": "string",
+      "enum": [
+        "immediate_action",
+        "same_day_or_within_24h",
+        "within_days",
+        "routine_or_weeks",
+        "unclear"
+      ]
+    },
+    "urgency_difference": {
+      "type": "string",
+      "enum": [
+        "none",
+        "minor_overtriage",
+        "minor_undertriage",
+        "material_overtriage",
+        "material_undertriage",
+        "unassessable"
+      ]
+    },
+    "urgency_reason": {
+      "type": "string"
+    },
+    "management_difference": {
+      "type": "string",
+      "enum": [
+        "none",
+        "minor",
+        "material",
+        "unassessable"
+      ]
+    },
+    "management_reason": {
+      "type": "string"
+    },
+    "lmic_failure": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "worker_protocol_difference": {
+      "type": "string",
+      "enum": [
+        "none",
+        "minor",
+        "material"
+      ]
+    },
+    "worker_protocol_reason": {
+      "type": "string"
+    },
+    "marker_appropriate": {
+      "type": "boolean"
+    },
+    "marker_repetition_appropriate": {
+      "type": "boolean"
+    },
+    "judge_reason": {
+      "type": "string"
+    },
+    "screening_objective_met": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "screening_reason": {
+      "type": "string"
+    },
+    "alan_evidence_difference": {
+      "type": "string",
+      "enum": [
+        "none",
+        "minor",
+        "material"
+      ]
+    },
+    "alan_evidence_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "alan_primary_diagnosis",
+    "diagnosis_correct",
+    "equivalence_used",
+    "evidence_sufficient_before_differentials",
+    "serious_unsafe_advice",
+    "observed_urgency_window",
+    "urgency_difference",
+    "urgency_reason",
+    "management_difference",
+    "management_reason",
+    "lmic_failure",
+    "worker_protocol_difference",
+    "worker_protocol_reason",
+    "marker_appropriate",
+    "marker_repetition_appropriate",
+    "judge_reason",
+    "screening_objective_met",
+    "screening_reason",
+    "alan_evidence_difference",
+    "alan_evidence_reason"
+  ]
+}

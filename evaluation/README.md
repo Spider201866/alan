@@ -6,12 +6,11 @@ The **250-case Excel bank supplies the patients**. A simulated **health worker**
 
 ## Start with your coding agent
 
-**Give Codex, Claude Code or your coding agent this instruction:**
+**Give your coding agent this instruction:**
 
 > Set up the [Alan evaluation harness](https://github.com/Spider201866/alan/tree/main/evaluation). Clone the [repository](https://github.com/Spider201866/alan.git) and work in `evaluation/`. Follow `AGENTS.md`, install the dependencies in a virtual environment and run the checks. Then open the viewer and run one recorded EYE-001 test. Show me the result. If account sign-in is needed, guide me through it.
 
 **Agents:** start with [AGENTS.md](AGENTS.md), then follow [setup steps](#agent-setup-steps). New evaluations require a signed-in **Codex CLI**, whichever agent handles setup.
-
 
 <table>
 <tr>
@@ -27,11 +26,10 @@ The **250-case Excel bank supplies the patients**. A simulated **health worker**
 
 ### How the simulation works
 
-- **Patient and health worker:** the 250-case bank represents the patient in front of the worker. Asking the patient or examining them means consulting the recorded case facts. The **filter** supplies those facts while hiding the reference diagnosis and assessment guidance.
-- **Realistic limits:** the worker has basic training, limited resources and limited English. Replies use simple, sometimes broken English: **at most eight words and up to two requested facts**. The worker can miss parts of a question or lack a finding, but must not invent an answer.
-- **Alan:** independently works out the diagnosis and plan from the spoken replies. He asks questions to uncover the facts, aiming for **five replies**. The runner permits four for a completed consultation and has a **seven-reply hard limit**. Emergencies can end earlier; the required clinical stages are assessed separately from reply count.
+- **Patient and health worker:** asking or examining the simulated patient means consulting recorded case facts. The **filter** supplies these while hiding the reference diagnosis and assessment guidance.
+- **Realistic limits:** basic training, limited resources and simple, sometimes broken English. Replies contain **at most eight words and two requested facts**. The worker may miss a question or lack a finding, but must not invent an answer.
+- **Alan:** works out the diagnosis and plan through questions, aiming for **five replies**. Four can complete a consultation; **seven is the hard limit**. Emergencies can end earlier. Clinical stages are assessed separately from reply count.
 - **Judge:** independently assesses the recorded dialogue. A separate worker audit checks fidelity to the case facts. The runner records the exchange for replay.
-
 
 ## Agent setup steps
 
@@ -69,13 +67,13 @@ The **250-case Excel bank supplies the patients**. A simulated **health worker**
 | Runner diagram and viewer screenshot | 242 kB |
 | Self-contained three-case demo | 520 kB |
 
-Approximate uncompressed file sizes; kB = 1,000 bytes and MB = 1,000,000 bytes. These cover `evaluation/` only. Python, Codex, the virtual environment, Git history and new recordings are additional. **No model weights are bundled.**
+Uncompressed sizes for `evaluation/`; kB = 1,000 bytes and MB = 1,000,000 bytes. Python, Codex, the virtual environment, Git history and new recordings are additional. **No model weights are bundled.**
 
 ## Installation
 
 **Required:** Git to clone the repository, **Python 3.11+**, a browser and the [Codex CLI](https://learn.chatgpt.com/docs/codex/cli) for new evaluations. Sign in to Codex and ensure your account has access to the models in `config.json`. Model calls consume the account's usage allowance.
 
-**Optional:** Node for the JavaScript player tests or an npm-based Codex installation; **FFmpeg** for MP4 conversion. Neither FFmpeg nor a Node server is needed for HTML replay. Opening an exported HTML file needs only a browser.
+**Optional:** Node for player tests or npm-based Codex installation; **FFmpeg** for MP4 conversion. HTML replay needs only a browser.
 
 ### Windows PowerShell — tested
 
@@ -111,9 +109,9 @@ python harness.py check
 
 On Windows, `py -3` avoids the Microsoft Store `python` shortcut. If the Python launcher is unavailable but `python --version` reports Python 3.11+, use `python` instead of `py -3` for environment creation.
 
-Use the virtual environment in **each terminal**. Run the activation command again after opening a new terminal in `evaluation/`. If already signed in, `codex login status` checks the account instead of signing in again.
+Activate the virtual environment in **each terminal**. If already signed in, use `codex login status` instead of signing in again.
 
-This release was checked with Codex CLI **0.144.6**. `check` verifies the required isolation flags and sign-in status without calling a model. It reports an incompatible CLI rather than weakening isolation. Use the [official installation guide](https://learn.chatgpt.com/docs/codex/cli) for your operating system.
+Tested with Codex CLI **0.144.6**. `check` verifies sign-in and required isolation flags without model calls; incompatible CLIs are reported.
 
 ### Setup troubleshooting
 
@@ -136,9 +134,9 @@ macOS/Linux installation and optional video conversion still need testing on tho
 python harness.py preflight
 ```
 
-This makes live calls to check the configured Alan, worker, clinical judge and challenge judge routes. It saves its evidence under `work/`. It is a connection and response-format check, not a clinical performance result.
+Makes live calls to check Alan, worker and judge connections and response formats. Evidence is saved under `work/`; this is not a clinical performance test.
 
-Defaults preserve the tested route:
+Tested defaults:
 
 | Role | Model | Reasoning |
 | --- | --- | --- |
@@ -182,7 +180,7 @@ python harness.py run --cases challenge --name challenges50
 python harness.py run --cases EYE-025,EYE-094,ENT-034,DER-045 --repeat 3 --name repeated-check
 ```
 
-Repeats run in rounds: the selected cases once, then the same cases again. Every case gets a new Alan conversation. The sidebar labels each repeat group.
+Repeats run in rounds, with a fresh Alan conversation per case and labelled groups in the sidebar.
 
 One dialogue runs at a time by default. A new run name never overwrites an existing run.
 
@@ -190,9 +188,9 @@ One dialogue runs at a time by default. A new run name never overwrites an exist
 
 Recording is automatic. Each run saves its exact prompts, case snapshot, models, checksums, replies, assessments and replay events under `runs/<name>/`.
 
-In the viewer, select **Replay run** or **Export HTML**. The HTML file contains the viewer, completed case recordings, styles and fonts and can be played without a server or account. The player includes speeds up to **×1000**. An unfinished export is labelled partial and reports omitted cases.
+Select **Replay run** or **Export HTML**. The self-contained HTML plays offline at speeds up to **×1000**. Unfinished exports are labelled partial and list omitted cases.
 
-Event recording captures completed replies and activity changes. Word-by-word reveal is a playback animation, not original token timing. Optional video recording uses the browser's recording support. MP4 conversion additionally needs FFmpeg on the server's PATH. HTML replay does not require FFmpeg.
+Recordings capture completed replies and activity changes; word reveal is an animation, not original token timing. Optional video recording depends on browser support; MP4 conversion needs FFmpeg on the server’s PATH.
 
 ## Stop, recover and inspect
 
@@ -210,7 +208,7 @@ Explicit model-capacity rejections receive up to three delayed retries. A timed-
 
 ## What is assessed
 
-Alan sees the opening and spoken worker replies. The worker sees an allowlisted view of patient facts, with an eight-word limit and at most two answering facts. It has no gold diagnosis, management or scoring instructions. Recorded findings that were never spoken are not evidence Alan received them.
+Alan is assessed on the opening and spoken replies, not on case findings the worker never disclosed.
 
 The clinical judge assesses the diagnosis, safety, urgency and management. Deterministic checks assess the dialogue process and reply discipline. Worker fidelity has a separate audit. A worker mistake does not automatically turn Alan's score red.
 
@@ -235,7 +233,7 @@ These are deliberately challenging synthetic cases. Any changes to prompts, case
 | `PROVENANCE.json` | Release checksums and development-source mapping |
 | `VERIFICATION.md` | Checks performed on this public package |
 
-The screenshot and demo show the three-case installation check, not a full-bank evaluation. No experiment folders, credentials or raw process logs are included. New runs and local settings are ignored by Git.
+Experiment folders, credentials and raw process logs are excluded. Git ignores new runs and local settings.
 
 ## Tests
 
@@ -244,7 +242,7 @@ python -m unittest discover -s tests
 node tests/test_replay_core.cjs
 ```
 
-Node is needed only for the player tests and whichever Codex installation method you choose. The viewer itself has no build step or Node server.
+The viewer needs no build step or Node server.
 
 ## Licence
 

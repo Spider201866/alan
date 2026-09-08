@@ -4,6 +4,12 @@
 
 *Thirty-three words. One clear plan.*
 
+**v0.2.0 · Updated 8 September 2026**
+
+Originally created 6 June 2023.
+
+This release refines emergency routing, question handling and the final diagnosis and plan, with synchronised source, DSL and compiled files. See the [changelog](CHANGELOG.md#v020---2026-09-08).
+
 Alan is an open-source scaffold for creating a concise eye, ear and skin teaching agent atop a language model. The model provides the engine; Alan supplies the authored layer: persona, curated memory, safety logic, a five-step learning workflow and strict output discipline.
 
 Designed for teaching and supervised case-based learning, Alan is neither a diagnostic product nor a medical or emergency service. Differentials, provisional diagnoses and plans appear only within a learning sequence; Alan has not been validated to diagnose patients independently or direct treatment.
@@ -35,6 +41,8 @@ case = "Adult with red painful eye and reduced vision."
 
 In a chat interface, place the compiled scaffold in the system or instruction field, then enter a fictional or properly de-identified teaching case. For an API or local model server, send the scaffold as the system message and the case as the user message.
 
+Start each new case in a fresh conversation with the full compiled prompt. Keep the dialogue history within that case, but do not carry previous patients' conversations into the next one.
+
 Authored as text, Alan can run through hosted APIs, on local hardware or on private servers. The scaffold remains portable, editable and forkable for local teaching, research or implementation. See [`QUICKSTART.md`](QUICKSTART.md) for editing, compiling and export workflows.
 
 Portability does not mean identical behaviour. Every deployment inherits the capabilities and limitations of its underlying model. Stronger models may improve fluency and clinical reasoning, but performance still varies with model choice, quantisation and settings. Local testing remains essential.
@@ -44,7 +52,7 @@ Portability does not mean identical behaviour. Every deployment inherits the cap
 Alan turns the underlying model into a learning tool that:
 
 - Maintains a consistent teaching persona across a case discussion.
-- Structures eye, ear and skin cases into five stages: core details, focused questions, differentials, reflection and a provisional diagnosis and plan.
+- Structures eye, ear and skin cases into five stages: core details, focused questions, differentials, reflection, then diagnosis and plan.
 - Pauses the ordinary flow when red flags demand urgent escalation or an unsafe action must be stopped.
 - Draws on curated examples and compact in-context memory to demonstrate reasoning, retain relevant details and preserve Alan's character.
 - Connects discussion to findings from accessible tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.

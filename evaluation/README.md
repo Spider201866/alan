@@ -2,7 +2,16 @@
 
 **Version 1.0.0 · 8 September 2026 · Tested on Windows**
 
-Recorded consultations between **Alan** and a simulated **health worker**, assessed by a separate **judge**. Includes a 250-case Excel bank, live viewer and offline replay.
+The **250-case Excel bank supplies the patients**. A simulated **health worker** sees the patient’s case facts and answers **Alan’s** questions. A separate **judge** assesses Alan. Includes a live viewer and offline replay.
+
+## Start with your coding agent
+
+**Give Codex, Claude Code or your coding agent this instruction:**
+
+> Set up the [Alan evaluation harness](https://github.com/Spider201866/alan/tree/main/evaluation). Clone the [repository](https://github.com/Spider201866/alan.git) and work in `evaluation/`. Follow `AGENTS.md`, install the dependencies in a virtual environment and run the checks. Then open the viewer and run one recorded EYE-001 test. Show me the result. If account sign-in is needed, guide me through it.
+
+**Agents:** start with [AGENTS.md](AGENTS.md), then follow [setup steps](#agent-setup-steps). New evaluations require a signed-in **Codex CLI**, whichever agent handles setup.
+
 
 <table>
 <tr>
@@ -18,9 +27,7 @@ Recorded consultations between **Alan** and a simulated **health worker**, asses
 
 *The filter selects available worker facts. Alan hears the replies; the runner records them and the judge assesses Alan.*
 
-## Quick start for humans and coding agents
-
-**Coding agents: read [AGENTS.md](AGENTS.md) first.** Codex, Claude Code or another agent can help with setup. New evaluations use the **Codex CLI** as the model backend.
+## Agent setup steps
 
 1. Work inside `evaluation/` and read [VERIFICATION.md](VERIFICATION.md). [CLAUDE.md](CLAUDE.md) points to the same agent instructions.
 2. Follow [installation](#installation), then run `python harness.py check` and [the offline tests](#tests). These do not call models.

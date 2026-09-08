@@ -79,8 +79,8 @@
       "bytes": 4292
     },
     "README.md": {
-      "sha256": "691720f24313c3058b4782b38fea2c7c9588d694e495d27883f8e9cafc880745",
-      "bytes": 12530
+      "sha256": "3ab276adfd830c8cc594be3389ab804ab52f6975fe950c8cdd63ea9bd66b1169",
+      "bytes": 13078
     },
     "requirements.txt": {
       "sha256": "5ab8a239c1418483ead11ccd73008173fdd3af6ae97f912357ede24da823b30a",
@@ -222,8 +222,8 @@
       "bytes": 14769
     },
     "CLAUDE.md": {
-      "sha256": "ddd28fe71a5d3404fbe685a513264411882f91537d520aa1e565018cf6fbbbdb",
-      "bytes": 271
+      "sha256": "33a74b97380a4dfffa8e074198ef27b49fc5eebeda3f1fa691a6d930458094b7",
+      "bytes": 259
     },
     "docs/runner-map.svg": {
       "sha256": "f395ebe9de999e2ff77edfdfa89fcf8a0eefcb69e1aef2f0a4910b132130e8c0",

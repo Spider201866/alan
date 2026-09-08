@@ -35,7 +35,7 @@ The live preflight passed with Codex CLI **0.144.6**, Alan on GPT-5.6 Sol with m
 
 A separate three-case recording completed **EYE-001, ENT-001 and EXT-E01** in order. Each case used a different Alan conversation and only continued that conversation within its own dialogue. The frozen prompts matched the release inputs. All three result files and recordings were present and the saved-run validator passed with no errors or warnings.
 
-This small check confirms installation, model routes, recording and assessment integration. It does not measure broad clinical reliability. The generated answers, model traces and run folders are kept outside the publication files.
+This small check confirms installation, model routes, recording and assessment integration. It does not measure broad clinical reliability. The approved HTML demo contains these three recorded dialogues and scores. Raw model traces and run folders remain outside the publication files.
 
 ## Viewer and export
 

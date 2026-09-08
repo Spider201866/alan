@@ -35,8 +35,8 @@
       "bytes": 66
     },
     "AGENTS.md": {
-      "sha256": "6b147a890e9e0ba96004428043718c1c1575910069eea215b6333d250be17631",
-      "bytes": 1506
+      "sha256": "fb8cf12857b51edb9fe3cbd19269d5f07c829f6e0c8a592bf89b476e90cfb205",
+      "bytes": 1748
     },
     "config.json": {
       "sha256": "6c890442cf8c7fde598466a5fd77fba1aa43ed1dcd27a69ac55396bfa95afd39",
@@ -79,8 +79,8 @@
       "bytes": 4292
     },
     "README.md": {
-      "sha256": "a8a7f37bd09bc6756c0a50e2e420442b9177f23544259567ca66f3de5f946105",
-      "bytes": 12394
+      "sha256": "21173e6acb555ab9e045dd393d3bdf1efc2bb19b9239837d512c88efb61a0a40",
+      "bytes": 12522
     },
     "requirements.txt": {
       "sha256": "5ab8a239c1418483ead11ccd73008173fdd3af6ae97f912357ede24da823b30a",
@@ -174,8 +174,8 @@
       "bytes": 8423
     },
     "VERIFICATION.md": {
-      "sha256": "b019b88e8465b4140986a04874803e080110f7334af02d890d64fd74d2324706",
-      "bytes": 4197
+      "sha256": "cefdcb9f46b99c3a7bb1b4ed592d820d9e8824a22a90463201c510414c57123c",
+      "bytes": 4251
     },
     "VERSION": {
       "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03",
@@ -232,6 +232,10 @@
     "docs/viewer.png": {
       "sha256": "373f00c9353ce5ca4832c6f101b81f9ef169cea3505d77d841e7243ddaeaaf5b",
       "bytes": 210856
+    },
+    "docs/demo/index.html": {
+      "sha256": "62c5d7937fde39b9b8bf3b3877ee0f2a07b258e5e71dba8c293e9cec6b5b4e2c",
+      "bytes": 520091
     }
   }
 }

@@ -4,15 +4,25 @@
 
 Recorded consultations between **Alan** and a simulated **health worker**, assessed by a separate **judge**. Includes a 250-case Excel bank, live viewer and offline replay.
 
-<img src="docs/runner-map.svg" width="520" alt="Runner map: judge above, patient and health worker on the left, Alan on the right, with dialogue arrows between them.">
+<table>
+<tr>
+<td width="55%"><img src="docs/runner-map.svg" width="420" alt="Judge above; patient and health worker on the left; Alan on the right."></td>
+<td valign="middle">
+<a href="https://spider201866.github.io/alan/"><strong>▶ Watch the demo</strong></a><br>
+3 cases · Autoplays<br>
+<em>No installation needed.</em><br><br>
+<a href="https://github.com/Spider201866/alan/raw/refs/heads/main/evaluation/docs/demo/index.html">Download HTML player</a>
+</td>
+</tr>
+</table>
 
-*The case filter controls the worker's available facts. Alan receives the spoken replies. The runner records the exchange and the judge assesses Alan.*
+*The filter selects available worker facts. Alan hears the replies; the runner records them and the judge assesses Alan.*
 
 ## Quick start for humans and coding agents
 
-**Codex, Claude Code and other coding agents: start here.** Any agent can help install and operate the package; **the model-calling backend currently requires the Codex CLI**, regardless of which agent helps you.
+**Coding agents: read [AGENTS.md](AGENTS.md) first.** Codex, Claude Code or another agent can help with setup. New evaluations use the **Codex CLI** as the model backend.
 
-1. Work inside `evaluation/`. Read [AGENTS.md](AGENTS.md) and [the verification record](VERIFICATION.md). [CLAUDE.md](CLAUDE.md) points to the same instructions.
+1. Work inside `evaluation/` and read [VERIFICATION.md](VERIFICATION.md). [CLAUDE.md](CLAUDE.md) points to the same agent instructions.
 2. Follow [installation](#installation), then run `python harness.py check` and [the offline tests](#tests). These do not call models.
 3. With live evaluation authorised, run `python harness.py preflight` to check the model routes.
 4. Start `python harness.py view`, open **http://127.0.0.1:8765/** and keep **Follow latest on**.
@@ -38,14 +48,15 @@ Recorded consultations between **Alan** and a simulated **health worker**, asses
 
 | Included files | Approximate size |
 | --- | --- |
-| Complete package | 1.21 MB |
+| Complete package | 1.74 MB |
 | Excel case bank | 98 kB |
 | All six prompts | 132 kB |
 | Runner, filter and scoring code | 234 kB |
 | Viewer, replay scripts and bundled font | 458 kB |
 | Runner diagram and viewer screenshot | 213 kB |
+| Self-contained three-case demo | 520 kB |
 
-Approximate uncompressed file sizes; kB = 1,000 bytes and MB = 1,000,000 bytes. These cover `evaluation/` only. Python, Codex, the virtual environment, Git history and generated recordings are additional and vary by installation. **No model weights are bundled.**
+Approximate uncompressed file sizes; kB = 1,000 bytes and MB = 1,000,000 bytes. These cover `evaluation/` only. Python, Codex, the virtual environment, Git history and new recordings are additional. **No model weights are bundled.**
 
 ## Installation
 
@@ -120,7 +131,7 @@ Defaults preserve the tested route:
 | Health worker | GPT-5.6 Terra | Medium |
 | Judge | GPT-5.6 Sol | High |
 
-If your account does not offer these models, explicitly choose available models in a copy of `config.json` and pass `--config config.local.json`. Changing the model changes the evaluation configuration. The harness never silently substitutes a model.
+If these models are unavailable, copy `config.json` to `config.local.json` and choose available models. Put the option before the command: `python harness.py --config config.local.json preflight`. Use it for subsequent run and view commands too. The harness never silently substitutes a model.
 
 ## Open the viewer
 
@@ -132,7 +143,7 @@ python harness.py view
 
 Open **http://127.0.0.1:8765/** in your browser. In Codex, open that address in its in-app browser. **Follow latest starts on**, so a new run appears when it starts. The worker spreadsheet is open by default.
 
-Keep this terminal running. If the port is occupied, use `python harness.py view --port 8767` and open the printed address.
+Keep this terminal running.
 
 ## Run cases
 
@@ -204,12 +215,12 @@ These are deliberately challenging synthetic cases. Any changes to prompts, case
 | `runtime/` | Runner, case filter, scoring, recording and validation |
 | `viewer/` | Viewer, replay player and offline HTML exporter |
 | `tests/` | Offline regression checks |
-| `docs/` | Runner map and viewer screenshot |
+| `docs/` | Runner map, screenshot and self-contained demo |
 | `AGENTS.md` / `CLAUDE.md` | Agent instructions and Claude Code entry point |
 | `PROVENANCE.json` | Release checksums and development-source mapping |
 | `VERIFICATION.md` | Checks performed on this public package |
 
-No old run folders, experiment launchers, account credentials or raw model-output files are included. The screenshot shows an excerpt from the installation check. Generated runs and local settings are ignored by Git. Keep results separate from the published package.
+The screenshot and demo show the three-case installation check, not a full-bank evaluation. No experiment folders, credentials or raw process logs are included. New runs and local settings are ignored by Git.
 
 ## Tests
 

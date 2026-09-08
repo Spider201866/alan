@@ -42,18 +42,18 @@ Recorded consultations between **Alan** and a simulated **health worker**, asses
 
 ![Alan viewer showing the score summary, runner map, worker facts, case list and recorded dialogue](docs/viewer.png)
 
-*Actual three-case installation check on Windows, with an eye case selected. This screenshot is a UI example, not a 250-case performance claim.*
+*Complete EYE-001 dialogue from the three-case Windows installation check: intake, differentials, reflection and final answer. This is a UI example, not a 250-case performance claim.*
 
 ### Package size
 
 | Included files | Approximate size |
 | --- | --- |
-| Complete package | 1.74 MB |
+| Complete package | 1.77 MB |
 | Excel case bank | 98 kB |
 | All six prompts | 132 kB |
 | Runner, filter and scoring code | 234 kB |
 | Viewer, replay scripts and bundled font | 458 kB |
-| Runner diagram and viewer screenshot | 213 kB |
+| Runner diagram and viewer screenshot | 242 kB |
 | Self-contained three-case demo | 520 kB |
 
 Approximate uncompressed file sizes; kB = 1,000 bytes and MB = 1,000,000 bytes. These cover `evaluation/` only. Python, Codex, the virtual environment, Git history and new recordings are additional. **No model weights are bundled.**

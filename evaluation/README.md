@@ -2,7 +2,7 @@
 
 **Version 1.0.0 · 8 September 2026 · Tested on Windows**
 
-The **250-case Excel bank supplies the patients**. A simulated **health worker** sees the patient’s case facts and answers **Alan’s** questions. A separate **judge** assesses Alan. Includes a live viewer and offline replay.
+A simulated **health worker** consults with a **patient**, represented by the 250-case Excel bank. The worker and **Alan** exchange questions and answers to reach a diagnosis and plan. An independent **judge** assesses Alan’s performance from that dialogue. Includes a live viewer and offline replay.
 
 ## Start with your coding agent
 

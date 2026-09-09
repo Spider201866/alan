@@ -41,3 +41,7 @@ After installation and the documented checks pass, use the message below. Read t
 > Tell me your selection, and I’ll run it, record it and show you the results in the viewer.
 
 Keep the invitation short and accept plain-English selections. Resolve these against the installed spreadsheet before running; clarify ambiguous selections without asking the user to write commands.
+
+## Model and provider changes
+
+The current backend is Codex CLI. Users can select available Alan, worker and judge models separately in config.local.json; verify reasoning support and run preflight. Operating from Claude Code does not select a different backend. OpenRouter and direct API backends require implementation and tests, not just a model-name or API-key change. If requested, preserve conversation isolation, worker fact boundaries, structured-output validation and recording; keep credentials out of configuration committed to Git. Do not claim an unimplemented provider works. For Alan model comparisons, hold the worker, judge, case set and prompts fixed unless the experiment explicitly varies them.

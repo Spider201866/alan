@@ -154,6 +154,14 @@ Tested defaults:
 
 If these models are unavailable, copy `config.json` to `config.local.json` and choose available models. Put the option before the command: `python harness.py --config config.local.json preflight`. Use it for subsequent run and view commands too. The harness never silently substitutes a model.
 
+### Different models and API providers
+
+**Available now:** this release calls models through the **Codex CLI**; it does not require the Codex desktop app. Change Alan, health worker and judge models independently in `config.local.json`, using models and reasoning settings available through your Codex account. Then run `preflight` before evaluating cases. Claude Code or another agent can operate the harness, but this does not change its model backend.
+
+**For broader comparisons:** an API backend could support OpenRouter or direct model-provider APIs. **That integration is not included in v1**: changing a model name or adding an API key alone will not enable it. An agent would need to implement and test the provider connection, authentication, conversation handling and structured replies. API calls would use the provider’s billing.
+
+**Keep comparisons fair:** preserve fresh conversations per case, worker fact boundaries and recorded prompts, replies and model settings. Keep worker and judge models fixed when comparing Alan’s underlying models. API access broadens the model choice; it does not by itself make the evaluation more reliable.
+
 ## Open the viewer
 
 In one terminal:

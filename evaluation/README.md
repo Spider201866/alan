@@ -19,7 +19,9 @@ A simulated **health worker** consults with a **patient**, represented by the 25
 <a href="https://spider201866.github.io/alan/"><strong>▶ Watch the demo</strong></a><br>
 3 cases · Autoplays<br>
 <em>No installation needed.</em><br><br>
-<a href="https://spider201866.github.io/alan/download.html">Download HTML player</a>
+<a href="https://spider201866.github.io/alan/download.html">Download HTML player</a><br><br>
+<strong>Reviewed 250-case run</strong><br>
+<a href="https://spider201866.github.io/alan/Alan-250.html">Watch full run</a> · <a href="https://github.com/Spider201866/alan/releases/download/reviewed-run-2026-09-08/Alan-250.html">Download HTML (10.2 MB)</a>
 </td>
 </tr>
 </table>
@@ -31,6 +33,8 @@ A simulated **health worker** consults with a **patient**, represented by the 25
 > - **Browse first:** “Show me the [patient spreadsheet](data/cases.xlsx) and help me choose cases.” You can select individual cases, all 50 ENT cases or the 50 challenges.
 >
 > **Agents:** after the installation check, ask “What would you like to test?” For a count-only request, clarify the case group or selection before running. Translate the selection into case IDs; see [run commands](#run-cases).
+
+**Full-run replay:** 250 completed cases from **7–8 September 2026**, with manual assessment corrections. These are reviewed historical results, not a new test of this release. Original setup: Alan trial v3, HW20-R5, runner83, judge4 and scorer28; Sol medium for Alan, Terra medium for the worker and Sol high for the judge. [Full provenance and download](https://github.com/Spider201866/alan/releases/tag/reviewed-run-2026-09-08). The replay is separate from the installation package.
 
 ### How the simulation works
 

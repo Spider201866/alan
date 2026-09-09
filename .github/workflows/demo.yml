@@ -26,6 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Include reviewed full-run replay
+        run: curl --fail --location --retry 3 "https://github.com/Spider201866/alan/releases/download/reviewed-run-2026-09-08/Alan-250.html" --output evaluation/docs/demo/Alan-250.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: evaluation/docs/demo

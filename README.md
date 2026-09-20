@@ -4,11 +4,11 @@
 
 *Thirty-three words. One clear plan.*
 
-**v0.2.0 · Updated 8 September 2026**
+**v0.2.0 · Source synchronised 20 September 2026**
 
 Originally created 6 June 2023.
 
-This release refines emergency routing, question handling and the final diagnosis and plan, with synchronised source, DSL and compiled files. See the [changelog](CHANGELOG.md#v020---2026-09-08).
+The DSL and compiled files now mirror the current gold source, `alan_sm.md`. This 20 September synchronisation includes source edits made since the frozen 8 September prompt. Validation and compiler tests pass; no new clinical model evaluation was run. See the [changelog](CHANGELOG.md#source-synchronisation---2026-09-20).
 
 Alan is an open-source scaffold for creating a concise eye, ear and skin teaching agent atop a language model. The model provides the engine; Alan supplies the authored layer: persona, curated memory, safety logic, a five-step learning workflow and strict output discipline.
 

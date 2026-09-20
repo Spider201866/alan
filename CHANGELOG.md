@@ -1,5 +1,13 @@
 # Changelog
 
+## Source synchronisation - 2026-09-20
+
+- Mirrored the current gold source into the DSL, preserving all 503 rule IDs, TAGs and GROUPs.
+- Rebuilt all three compiled outputs and updated the source header date.
+- Incorporated existing source refinements, including waiting for the reply before Step 5 and asking the worker for examination observations.
+- Exact parity, lint and compiler checks pass; all 138 local tests pass.
+- No new clinical model evaluation was run. Earlier evaluation results apply to their recorded frozen prompt versions.
+
 ## v0.2.0 - 2026-09-08
 
 - Updated the source date and synchronised the full source, DSL and compiled prompts.

@@ -1,20 +1,17 @@
-Alan v0.2.0 validation report
-Date: 8 September 2026
+Alan source synchronisation validation report
+Date: 20 September 2026
 
-PASS: alan_sm.md equals Alan_DSL after wrapper removal.
-PASS: 503 wrapped rules, 503 unique IDs, allowed section/tag/group values.
-PASS: no deprecated EXS IDs.
+Authoritative source: current alan_sm.md, mirrored without further wording edits.
+PASS: exact source/DSL parity after wrapper removal.
+PASS: 503 wrapped rules and unique IDs; existing IDs, TAGs and GROUPs preserved.
+PASS: valid wrappers and allowed values; no deprecated EXS IDs.
 PASS: both compilers produce identical, non-empty output.
-PASS: alan_compiled.txt, Alan_dsl_complied.txt and Alan_dsl_compiled.txt match the tested frozen prompt.
-PASS: UTF-8 LF source and compiled outputs.
-PASS: full local suite: 112 tests.
-PASS: clean public release snapshot: validation and all 9 published tests.
+PASS: all three compiled files match; sources and outputs use UTF-8 LF.
+PASS: full local suite: 138 tests.
 
-Compiled SHA-256: 39ac3db34d751079e902b9aa706f5d47961c4dd75eb6bf21e5dd6ac222a0d715
+Compiled SHA-256: a1c0b31a56dead5f44612eedabf9ef7f251ed75d1ddbae8537c4677b196a4df2
 
-The clinical prompt is unchanged from the frozen Alan used in the September
-250-case run and subsequent health-worker trials. Source comments add the
-release version and update date; comments are stripped by the compiler.
-The recent twelve-dialogue trial was 12 green, mean index 97, with separate
-worker audit observations. This is narrow evaluation evidence, not a claim
-of general clinical validation. It is not bundled into the public release.
+This synchronisation incorporates previously authored source edits. It is not
+byte-identical to the frozen 8 September evaluation prompt. No new clinical
+model evaluation was run for this publication; historical evaluation results
+remain evidence for their recorded prompt versions only.

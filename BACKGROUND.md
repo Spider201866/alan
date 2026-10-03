@@ -16,7 +16,7 @@ Alan addresses that teaching gap, not the whole health system. Case discussions 
 
 ## Origins
 
-The project predates LLMs. Seven or eight years before the first public release, the starting question was how to distil large ophthalmic textbooks into something compact enough to carry and use. One proposal imagined low-cost miniature books printed on bible-thin paper.
+The original compression project preceded Alan's use of LLMs. Seven or eight years before the first public release, the starting question was how to distil large ophthalmic textbooks into something compact enough to carry and use. One proposal imagined low-cost miniature books printed on bible-thin paper.
 
 The same compression instinct became the 2021-2022 Atoms project: visual algorithm cards for clinics, fieldwork and rapid student revision. Never intended to replace textbooks or practical training, the cards nevertheless showed how far clinical knowledge could be condensed, even into a single smartphone-friendly image.
 
@@ -55,7 +55,7 @@ The intended presence is useful rather than theatrical: manners, memory and purp
 ## Timeline
 
 - **6 June 2023:** first real working version of Alan, remembered in the project history as D-Day.
-- **6 June 2026:** current Alan Agent manifest date for the open-source prompt line.
+- **6 June 2026:** Alan Agent manifest date for the open-source prompt line.
 - **23 June 2026:** first public GitHub release.
 
 ## Principles in Brief

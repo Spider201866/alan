@@ -8,8 +8,6 @@
 
 Originally created 6 June 2023.
 
-The DSL and compiled files now mirror the current gold source, `alan_sm.md`. This 20 September synchronisation includes source edits made since the frozen 8 September prompt. Validation and compiler tests pass; no new clinical model evaluation was run. See the [changelog](CHANGELOG.md#source-synchronisation---2026-09-20).
-
 Alan is an open-source scaffold for creating a concise eye, ear and skin teaching agent atop a language model. The model provides the engine; Alan supplies the authored layer: persona, curated memory, safety logic, a five-step learning workflow and strict output discipline.
 
 Designed for teaching and supervised case-based learning, Alan is neither a diagnostic product nor a medical or emergency service. Differentials, provisional diagnoses and plans appear only within a learning sequence; Alan has not been validated to diagnose patients independently or direct treatment.
@@ -22,7 +20,7 @@ The narrow brief is matched by a distinctive voice. Alan is not a general medica
 
 ## Use Alan
 
-[`alan_compiled.txt`](alan_compiled.txt) is the ready-to-use scaffold. Load the file as a system or instruction prompt.
+[`alan_compiled.txt`](alan_compiled.txt) is the ready-to-use scaffold for chat interfaces, APIs and local model servers. Load it as the system or instruction prompt and supply a fictional or properly de-identified teaching case as the user message.
 
 ```powershell
 git clone https://github.com/Spider201866/alan.git
@@ -38,8 +36,6 @@ case = "Adult with red painful eye and reduced vision."
 # Send alan_scaffold as the system or instruction prompt.
 # Send case as the user message.
 ```
-
-In a chat interface, place the compiled scaffold in the system or instruction field, then enter a fictional or properly de-identified teaching case. For an API or local model server, send the scaffold as the system message and the case as the user message.
 
 Start each new case in a fresh conversation with the full compiled prompt. Keep the dialogue history within that case, but do not carry previous patients' conversations into the next one.
 
@@ -83,6 +79,8 @@ No institutional endorsement by the University of St Andrews is implied.
 - [`SAFETY.md`](SAFETY.md): intended use, safety status and deployment cautions.
 
 ## For Maintainers
+
+The DSL and compiled files now mirror the current gold source, `alan_sm.md`. This 20 September synchronisation includes source edits made since the frozen 8 September prompt. Validation and compiler tests pass; no new clinical model evaluation was run. See the [changelog](CHANGELOG.md#source-synchronisation---2026-09-20).
 
 [`Alan_DSL`](Alan_DSL) wraps the canonical prompt with stable IDs, TAGs and GROUPs for traceable editing and ablation. [`compile_DSL.py`](compile_DSL.py) is the primary compiler. [`compile.py`](compile.py) is retained as the legacy compiler. See [`DSL.md`](DSL.md) and [`CONTRIBUTING.md`](CONTRIBUTING.md) before changing prompt content.
 

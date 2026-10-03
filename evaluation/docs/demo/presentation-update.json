@@ -1,0 +1,22 @@
+{
+  "presentation_updated": "2026-10-03",
+  "recording_dates": "7\u20138 September 2026",
+  "source_url": "https://github.com/Spider201866/alan/releases/download/reviewed-run-2026-09-08/Alan-250.html",
+  "published_viewer_logic_matches_pre_tidy_baseline": true,
+  "embedded_payload_identical": true,
+  "payload_sha256": "b0206b8f11c0d65622558fa2d786cc06bea8ecd200fa312f138577eb70e78cdc",
+  "case_count": 250,
+  "recording_coverage": {
+    "complete": 250,
+    "unfinished": 0,
+    "failed": 0,
+    "missing": 0,
+    "damaged": 0,
+    "expected": 250,
+    "recovered": 0
+  },
+  "before_html_sha256": "98aabc5a191d583728b1643368078ea40dc06116290ecc040ee8336f897e3b61",
+  "html_sha256": "f04d4128564d79c395021e23071cb2a8864c2ba3af3a1b0a95bff4a469669425",
+  "html_bytes": 10198930,
+  "model_calls": 0
+}

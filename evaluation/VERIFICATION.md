@@ -4,6 +4,10 @@
 
 This checks the portable release package. It is not a new 250-case clinical evaluation.
 
+## Public replay presentation — 3 October 2026
+
+The 250-case historical replay has a refined viewer. Its embedded recording payload is byte-for-byte identical to the original published asset. Case navigation, filters, replay and display preferences were checked in a browser. This is a presentation update, with no new model calls or scoring changes. The original release remains available.
+
 ## Case bank
 
 The updated source workbook already contained all 50 challenges in its **Extra 50** tab. The old loader still opened archived source files before applying the current spreadsheet definitions. Those lookups were redundant for the current challenge pipeline.

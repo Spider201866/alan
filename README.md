@@ -4,7 +4,7 @@
 
 *Thirty-three words. One clear plan.*
 
-**v0.2.0 · Source synchronised 20 September 2026**
+**v0.2.0 · README updated 3 October 2026**
 
 Originally created 6 June 2023.
 
@@ -16,7 +16,9 @@ The design begins with constraints common in low- and middle-income country (LMI
 
 The narrow brief is matched by a distinctive voice. Alan is not a general medical chatbot, but a clinical intelligence: formally polite, exacting, unsentimental and faintly eccentric. Terse, steady and dryly confident, he has a taste for order and small oddities: a useful presence with manners, memory and purpose.
 
-![Alan overview](assets/alan-overview.png)
+[![Alan overview poster](assets/alan-overview.png)](assets/Alan-poster-A3-authored.pdf)
+
+[View or download the A3 poster (PDF)](assets/Alan-poster-A3-authored.pdf).
 
 ## Use Alan
 
@@ -45,7 +47,9 @@ Portability does not mean identical behaviour. Every deployment inherits the cap
 
 ## Evaluation harness
 
-The self-contained [evaluation harness](evaluation/README.md) includes a 250-case Excel bank, simulated health worker, separate judges, recorder and browser viewer. Follow its README to install it, run cases and export an offline HTML replay. The harness starts at **version 1** and includes Alan **v0.2.0**.
+The self-contained [evaluation harness](evaluation/README.md) includes a 250-case Excel bank, simulated health worker, separate judges, recorder and browser viewer. Follow its README to install it, run cases and export an offline HTML replay. The published package is **v1.0.0**, with its frozen Alan **v0.2.0** prompt from 8 September 2026.
+
+[Watch the reviewed 250-case run](https://spider201866.github.io/alan/Alan-250.html) or [download the offline HTML replay](https://github.com/Spider201866/alan/releases/download/reviewed-run-ui-2026-10-03/Alan-250.html). Recorded on 7–8 September 2026, its viewer was refreshed on 3 October 2026. The recorded dialogues and reviewed assessments are unchanged.
 
 ## What Alan Does as a Learning Tool
 

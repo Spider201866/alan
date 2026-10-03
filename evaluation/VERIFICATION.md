@@ -8,6 +8,12 @@ This checks the portable release package. It is not a new 250-case clinical eval
 
 The 250-case historical replay has a refined viewer. Its embedded recording payload is byte-for-byte identical to the original published asset. Case navigation, filters, replay and display preferences were checked in a browser. This is a presentation update, with no new model calls or scoring changes. The original release remains available.
 
+## Documentation and link check — 3 October 2026
+
+Checked the root README, Quick Start and harness instructions against the published files and commands. The local document and image links resolve, and the public demo, full-run replay, HTML download, setup guide and licence links respond successfully. The root README now shows its documentation date and the supplied authored A3 poster, with the original PDF linked.
+
+The published harness passed its setup check, all 36 offline Python tests and the JavaScript replay tests. Root source validation and all nine compiler tests passed. These checks made no model calls; release, prompt-source and historical recording dates retain their original meanings.
+
 ## Case bank
 
 The updated source workbook already contained all 50 challenges in its **Extra 50** tab. The old loader still opened archived source files before applying the current spreadsheet definitions. Those lookups were redundant for the current challenge pipeline.

@@ -37,11 +37,7 @@ For ordinary prompt edits:
 
 1. Edit [`alan_sm.md`](alan_sm.md).
 2. Reflect the same prompt text in [`Alan_DSL`](Alan_DSL) with wrappers preserved.
-3. Run validation.
-
-```powershell
-python validate.py
-```
+3. Rebuild the compiled outputs, then run the validation checks below.
 
 Do not make silent clinical wording changes in only one source file.
 

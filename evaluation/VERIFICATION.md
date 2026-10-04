@@ -4,6 +4,10 @@
 
 This checks the portable release package. It is not a new 250-case clinical evaluation.
 
+## Public documentation review — 4 October 2026
+
+The README and supporting documents now lead with Alan's teaching purpose, use concise statements of clinical responsibility and retain the qualifications on model dependence, patient data and evaluation evidence. Authorship wording is consistent with the supplied poster. Document links, prompt-loading examples and release checksums were checked. Prompt text, case data, scoring, runtime code and recorded results are unchanged.
+
 ## Public replay presentation — 3 October 2026
 
 The 250-case historical replay has a refined viewer. Its embedded recording payload is byte-for-byte identical to the original published asset. Case navigation, filters, replay and display preferences were checked in a browser. This is a presentation update, with no new model calls or scoring changes. The original release remains available.

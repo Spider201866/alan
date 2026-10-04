@@ -15,7 +15,7 @@ Alan currently uses only the Python standard library for its compiler and valida
 
 The language model supplies the engine; Alan supplies the scaffold. Load [`alan_compiled.txt`](alan_compiled.txt) as the system or instruction prompt in your chosen interface.
 
-Minimal provider-agnostic shape:
+Prompt-loading example for Python:
 
 ```python
 from pathlib import Path
@@ -26,6 +26,8 @@ teaching_case = "Child with itchy ear, discharge and reduced hearing."
 # Pass alan_scaffold as the model instruction.
 # Pass teaching_case as the user message.
 ```
+
+Start each case in a fresh conversation with the full compiled prompt. Retain the dialogue history within that case.
 
 The exact API call depends on the provider. The same scaffold can move between hosted APIs, local hardware and private servers, but behaviour will vary with model choice, quantisation and settings. Test every deployment locally.
 

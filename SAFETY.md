@@ -1,23 +1,16 @@
 # Safety
 
-Alan is a teaching and learning scaffold for eye, ear and skin care. The scaffold is not a medical device, diagnostic service, emergency service or substitute for local clinical judgement.
+Alan supports eye, ear and skin teaching through concise case discussion and structured reasoning. This page sets out responsibilities for using it in teaching, research and clinical settings.
 
 ## Intended Use
 
-Designed for health workers, students, clinical trainers, implementers and researchers, the scaffold supports structured learning, case discussion and supervised teaching.
+Designed for health workers, students and clinical teachers, Alan supports case-based learning. Researchers and implementers can adapt the scaffold for local teaching needs.
 
-Use alongside real clinical work requires a responsible health professional to examine the patient, apply local protocols and escalate when needed.
+## Clinical Responsibility
 
-Any differential, provisional diagnosis or plan remains educational and must be checked against examination findings, local guidance and senior clinical judgement.
+Where case discussion informs patient care, the treating health professional remains responsible for assessment, clinical decisions and referral, using examination findings and local guidance.
 
-## Not Intended For
-
-- Unsupervised patient self-diagnosis.
-- Independent diagnosis or clinical decision-making.
-- Emergency triage without local clinical review.
-- Automated treatment decisions.
-- Replacement of referral systems, senior review or local protocols.
-- Use where regulatory approval, governance review or formal clinical validation is required but absent.
+Alan has not been validated for independent clinical decision-making, patient self-diagnosis or automated treatment decisions.
 
 ## Escalation
 
@@ -29,14 +22,14 @@ Whenever an output conflicts with local guidance, clinical examination, senior a
 
 Use fictional or properly de-identified cases for ordinary teaching and testing.
 
-Do not send patient-identifiable information to a hosted model without explicit approval, suitable data-processing arrangements and appropriate security controls. Minimise stored prompts, outputs and logs. Follow local privacy and retention requirements.
+Sending patient-identifiable information to a hosted model requires explicit approval, suitable data-processing arrangements and appropriate security controls. Minimise stored prompts, outputs and logs. Follow local privacy and retention requirements.
 
 ## Deployment Duties
 
 Anyone deploying Alan should:
 
-- Make the intended user and limits explicit.
-- Keep a responsible health professional in the loop.
+- Make the intended users and limits clear.
+- Identify who is responsible for clinical review and escalation.
 - Test with representative, properly de-identified local cases, languages, referral pathways and available tools.
 - Monitor unsafe, unclear or overconfident outputs.
 - Keep version records for the prompt, model, settings and any local modifications.
@@ -44,6 +37,8 @@ Anyone deploying Alan should:
 
 ## Evidence Position
 
-Compiler and prompt-integrity checks protect the repository structure. They do not prove clinical safety, diagnostic accuracy or deployment readiness.
+Source and compiler checks confirm prompt integrity. They do not measure clinical performance.
 
-Clinical evaluation, information-governance review and local validation remain the responsibility of the implementer.
+Alan remains experimental. Recorded evaluations describe performance on the tested cases with the recorded prompt, model and settings. They can reveal strengths and failure patterns; suitability for clinical use requires evaluation in the intended setting.
+
+Implementers remain responsible for local evaluation, information governance and any applicable clinical or regulatory approvals.

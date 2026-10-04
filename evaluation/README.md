@@ -2,9 +2,9 @@
 
 **Version 1.0.0 · Released 8 September 2026 · Tested on Windows**
 
-*Documentation updated 3 October 2026.*
+*Documentation updated 4 October 2026.*
 
-A simulated **health worker** consults with a **patient**, represented by the 250-case Excel bank. The worker and **Alan** exchange questions and answers to reach a diagnosis and plan. An independent **judge** assesses Alan’s performance from that dialogue. Includes a live viewer and offline replay.
+A simulated **health worker** exchanges case information with **Alan**, drawing on a 250-case Excel bank. Independent **judges** assess Alan's responses, while a separate worker audit checks fidelity to the case facts. The harness records each run for live viewing and offline replay.
 
 ## Start with your coding agent
 

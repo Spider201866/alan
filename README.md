@@ -4,17 +4,17 @@
 
 *Thirty-three words. One clear plan.*
 
-**v0.2.0 · README updated 3 October 2026**
+**v0.2.0 · README updated 4 October 2026**
 
 Originally created 6 June 2023.
 
-Alan is an open-source scaffold for creating a concise eye, ear and skin teaching agent atop a language model. The model provides the engine; Alan supplies the authored layer: persona, curated memory, safety logic, a five-step learning workflow and strict output discipline.
+Alan is an open-source scaffold for concise eye, ear and skin teaching with a language model. The model generates replies; Alan supplies the authored layer: persona, curated memory, safety logic, a five-step learning workflow and a concise response format.
 
-Designed for teaching and supervised case-based learning, Alan is neither a diagnostic product nor a medical or emergency service. Differentials, provisional diagnoses and plans appear only within a learning sequence; Alan has not been validated to diagnose patients independently or direct treatment.
+Designed for health workers, students and clinical teachers, Alan supports case-based learning and structured clinical reasoning.
 
 The design begins with constraints common in low- and middle-income country (LMIC) settings: limited specialist access, affordable examination tools, short consultations and the need for one clear next teaching step. The same disciplined approach can support brief, structured clinical teaching anywhere.
 
-The narrow brief is matched by a distinctive voice. Alan is not a general medical chatbot, but a clinical intelligence: formally polite, exacting, unsentimental and faintly eccentric. Terse, steady and dryly confident, he has a taste for order and small oddities: a useful presence with manners, memory and purpose.
+The narrow brief is matched by a distinctive voice. Alan is a clinical intelligence: formally polite, exacting, unsentimental and faintly eccentric. Terse, steady and dryly confident, he has a taste for order and small oddities: a useful presence with manners, memory and purpose.
 
 [![Alan overview poster](assets/alan-overview.png)](assets/Alan-poster-A3-authored.pdf)
 
@@ -29,6 +29,8 @@ git clone https://github.com/Spider201866/alan.git
 cd alan
 ```
 
+Prompt-loading example for Python:
+
 ```python
 from pathlib import Path
 
@@ -42,8 +44,6 @@ case = "Adult with red painful eye and reduced vision."
 Start each new case in a fresh conversation with the full compiled prompt. Keep the dialogue history within that case, but do not carry previous patients' conversations into the next one.
 
 Authored as text, Alan can run through hosted APIs, on local hardware or on private servers. The scaffold remains portable, editable and forkable for local teaching, research or implementation. See [`QUICKSTART.md`](QUICKSTART.md) for editing, compiling and export workflows.
-
-Portability does not mean identical behaviour. Every deployment inherits the capabilities and limitations of its underlying model. Stronger models may improve fluency and clinical reasoning, but performance still varies with model choice, quantisation and settings. Local testing remains essential.
 
 ## Evaluation harness
 
@@ -62,17 +62,13 @@ Alan turns the underlying model into a learning tool that:
 - Connects discussion to findings from accessible tools such as the Arclight ophthalmoscope, otoscope and dermatoscope.
 - Keeps responses brief, plain and structured for teaching in time-limited settings.
 
-The sequence supports teaching rather than automated diagnosis.
-
 ## Limits and Safety
 
-Alan cannot examine a patient, verify submitted information, authorise treatment or provide emergency care. Every differential, provisional diagnosis and plan forms part of a teaching sequence and requires checking against examination findings, local guidance and senior clinical judgement.
+Alan supports clinical teaching and structured case discussion. Consider its suggestions alongside examination findings and local clinical guidance. Responsibility for patient care remains with the treating health professional.
 
-Use fictional or properly de-identified cases unless the deployment has explicit approval for handling patient-identifiable information. Do not send identifiable clinical information to a hosted model without appropriate information-governance approval.
+Performance depends on the underlying model and configuration. The recorded evaluations assess performance on the supplied cases; they do not establish suitability for independent clinical use.
 
-Read [`SAFETY.md`](SAFETY.md) before using Alan in teaching, research or deployment.
-
-No institutional endorsement by the University of St Andrews is implied.
+Use fictional or properly de-identified cases. Patient-identifiable information requires approved data-handling arrangements. See [`SAFETY.md`](SAFETY.md) for evidence status and implementation responsibilities.
 
 ## Start Here
 
@@ -105,3 +101,5 @@ Alan uses a split licence:
 - Python code and tests: MIT.
 
 See [`LICENSE.md`](LICENSE.md) and [`CITATION.cff`](CITATION.cff).
+
+Author: WJW. Affiliation: University of St Andrews; no institutional endorsement implied.

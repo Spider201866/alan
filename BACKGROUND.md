@@ -6,13 +6,13 @@ The fullest account of that journey remains WJW's February 2026 essay, *Alan: A 
 
 That original question eventually produced a scaffold rather than another reference book. Alan sits atop a language model engine: the model generates language, while the authored layer supplies the teaching role, curated memory, safety logic, stepwise workflow and voice. Every part can be inspected, versioned, compiled, moved between models and forked for local needs.
 
-The design is deliberately not neutral. Brevity, explainable steps and low-cost examination tools take priority. Constraints common in low- and middle-income country (LMIC) settings shape the whole system around one clear next teaching step.
+The scaffold is deliberately authored. Brevity, explainable steps and low-cost examination tools take priority. Constraints common in low- and middle-income country (LMIC) settings shape the whole system around one clear next teaching step.
 
 ## Clinical Problem
 
 Across many low-resource settings, shortages of staff, equipment, power, specialist support, teaching time and reliable reference material constrain eye, ear and skin care. A health worker may face a queue with little more than a low-cost tool and no experienced colleague immediately available.
 
-Alan addresses that teaching gap, not the whole health system. Case discussions begin with careful questions, observed signs and safety checks before moving through differentials towards a practical next step. Paired with the Arclight ophthalmoscope, otoscope and dermatoscope, the scaffold helps trainers connect basic examination findings with disciplined reasoning.
+Alan addresses that teaching gap through case discussion. Careful questions, observed signs and safety checks lead through differentials towards a practical next step. Paired with the Arclight ophthalmoscope, otoscope and dermatoscope, the scaffold helps trainers connect basic examination findings with disciplined reasoning.
 
 ## Origins
 
@@ -72,7 +72,7 @@ The intended presence is useful rather than theatrical: manners, memory and purp
 
 Alan serves health workers, students, clinical trainers, prompt researchers and implementers building learning tools around eye, ear and skin care.
 
-Responsible use requires a teacher or health professional to check every output against local context, examination findings and referral rules. Unsupervised patient self-diagnosis falls outside the intended scope.
+Where case discussion informs patient care, clinical decisions remain with the treating health professional.
 
 ## Source Structure
 
@@ -80,9 +80,9 @@ The plain source file, [`alan_sm.md`](alan_sm.md), is the gold standard for huma
 
 ## Safety Position
 
-Alan can support learning and structured thinking, but cannot examine a patient, verify submitted information or provide a validated diagnosis. Every differential, provisional diagnosis and plan is educational and requires local checking. Emergency symptoms, severe pain, sudden loss of vision or hearing, dangerous trauma, airway danger and other local red flags require urgent local care.
+Alan's performance depends on the underlying model and configuration. Recorded case evaluations can identify strengths and failures, but do not establish suitability for independent clinical use.
 
-The project remains experimental. Prompt-integrity checks and regression tests provide useful engineering controls, not evidence of clinical safety or deployment readiness. Field evaluation, local governance, privacy practice and clinical responsibility remain essential.
+The project remains experimental. Source and compiler checks confirm prompt integrity; clinical reliability requires evaluation of the selected model, settings and intended use. See [`SAFETY.md`](SAFETY.md) for evidence status and implementation responsibilities.
 
 ## Attribution
 

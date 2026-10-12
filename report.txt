@@ -1,17 +1,24 @@
-Alan source synchronisation validation report
-Date: 20 September 2026
+Alan prompt revision - 12 October 2026
 
-Authoritative source: current alan_sm.md, mirrored without further wording edits.
-PASS: exact source/DSL parity after wrapper removal.
-PASS: 503 wrapped rules and unique IDs; existing IDs, TAGs and GROUPs preserved.
-PASS: valid wrappers and allowed values; no deprecated EXS IDs.
-PASS: both compilers produce identical, non-empty output.
-PASS: all three compiled files match; sources and outputs use UTF-8 LF.
-PASS: full local suite: 138 tests.
+Source changes
+- ROL-060: keep acknowledgement examples but use them occasionally rather than opening every reply with one.
+- LOG-440: explicitly number differentials 1), 2) and 3); permit unlikely or exclude for a supported dangerous alternative. Unknown findings never justify unlikely.
+- Update the source revision date. Clinical examples, memory and safety-controller rules are unchanged.
 
-Compiled SHA-256: a1c0b31a56dead5f44612eedabf9ef7f251ed75d1ddbae8537c4677b196a4df2
+Static verification
+- Gold source and stripped DSL are identical, with 503 unique stable IDs and no deprecated EXS IDs.
+- Both compilers produce identical, non-empty UTF-8 LF text, including the historic-name output and its alias.
+- Full local repository suite: 138 tests passed.
+- Compiled SHA-256: ada79ab1bb713727bf5abf9e5366a9b167160489565141cb491eb3bed0d818bd.
 
-This synchronisation incorporates previously authored source edits. It is not
-byte-identical to the frozen 8 September evaluation prompt. No new clinical
-model evaluation was run for this publication; historical evaluation results
-remain evidence for their recorded prompt versions only.
+Bounded live evidence
+- Three fresh simulated cases: allergic conjunctivitis, cellulitis and acute angle-closure glaucoma.
+- Three correct diagnoses, three numbered lists and three sets of bracketed labels; two of three lists followed the required rank order.
+- Allergy still used possible for its third differential. This instruction-following issue remains unresolved.
+- Routine acknowledgement counts were zero, zero and one. All cases retained a reflection and direct final diagnosis.
+- No serious unsafe advice was flagged. Allergy follow-up was slightly later than the case reference.
+- Worker examples and the eight-word, two-finding limits remained unchanged. Recorded-run validation passed.
+- These cases used the preceding must exclude wording. The final change to exclude received static checks, without another clinical trial.
+
+Scope
+This is a dated prompt revision within v0.2.0, not a new clinical benchmark or a replacement of the frozen evaluation v1.0.0 package. The published historical 250-case recording is unchanged. A fresh 250-case evaluation has not yet started.

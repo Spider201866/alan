@@ -1,5 +1,13 @@
 # Changelog
 
+## Reviewed prompt revision — 2026-10-12
+
+- Published the reviewed gold prompt, matching DSL and all three compiled outputs. Stable DSL IDs are preserved.
+- Clarified clinical cue priority, differential ranking, reflection and the final single-diagnosis form. Retained occasional acknowledgement examples and concise challenge handling.
+- These are replacements within v0.2.0, not a longer prompt or a new full-bank performance claim.
+- Targeted development trials and nearby controls are recorded separately. The revised ROP case is a case-bank correction, not evidence of an Alan performance gain.
+- The historical September replay and frozen evaluation release are unchanged. The next full-bank run has not started.
+
 ## Source synchronisation - 2026-09-20
 
 - Mirrored the current gold source into the DSL, preserving all 503 rule IDs, TAGs and GROUPs.

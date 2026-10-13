@@ -1,5 +1,13 @@
 # Changelog
 
+## Reviewed prompt revision — 2026-10-13
+
+- Published the approved gold source, matching DSL and all three compiled outputs with the 13 October source date. No additional clinical wording changes were made during publication.
+- Incorporated the reviewed cue-priority, final-diagnosis, ranking and concise referral changes, including the approved short retinoblastoma teaching example.
+- Targeted trials and nearby controls informed development. Revised cases and scoring policies remain separate from claims of prompt performance. Original results are preserved.
+- Corrected stale README synchronisation wording and the background timeline. The September replay and frozen harness release remain unchanged.
+- The next fresh 250-case run has not started.
+
 ## Reviewed prompt revision — 2026-10-12
 
 - Published the reviewed gold prompt, matching DSL and all three compiled outputs. Stable DSL IDs are preserved.

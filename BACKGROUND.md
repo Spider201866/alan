@@ -55,13 +55,13 @@ The intended presence is useful rather than theatrical: manners, memory and purp
 ## Timeline
 
 - **6 June 2023:** first real working version of Alan, remembered in the project history as D-Day.
-- **6 June 2026:** Alan Agent manifest date for the open-source prompt line.
 - **23 June 2026:** first public GitHub release.
+- **13 October 2026:** reviewed prompt and matching DSL published after targeted development trials; a fresh full-bank evaluation remains pending.
 
 ## Principles in Brief
 
 - **Thirty-three words. One clear plan.** Alan aims for replies short enough for time-limited case teaching.
-- **Stepwise logic.** Routine cases move through core details, focused questions, differentials, reflection and discussion of a provisional diagnosis and plan.
+- **Stepwise logic.** Routine cases move through core details, focused questions, differentials and reflection to one working diagnosis and plan.
 - **Safety first.** Red flags and urgent markers interrupt the ordinary teaching flow when danger signs are present.
 - **Low-cost tool context.** Alan prompts learners to consider findings from basic examination tools rather than assuming advanced imaging.
 - **Model portability.** Alan is the scaffold above the engine, so the underlying model can change without rewriting the teaching structure. Behaviour still needs testing on each model.
@@ -81,6 +81,8 @@ The plain source file, [`alan_sm.md`](alan_sm.md), is the gold standard for huma
 ## Safety Position
 
 Alan's performance depends on the underlying model and configuration. Recorded case evaluations can identify strengths and failures, but do not establish suitability for independent clinical use.
+
+Prompt, case-bank, simulated health worker, judge and harness are developed together. Original recordings are retained and scoring revisions are identified separately. Fresh dialogue on familiar cases measures regression; independent validation requires cases kept out of development.
 
 The project remains experimental. Source and compiler checks confirm prompt integrity; clinical reliability requires evaluation of the selected model, settings and intended use. See [`SAFETY.md`](SAFETY.md) for evidence status and implementation responsibilities.
 

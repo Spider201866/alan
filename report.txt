@@ -1,22 +1,19 @@
-Alan reviewed prompt publication — 12 October 2026
+Alan reviewed prompt publication — 13 October 2026
 
-The reviewed local Alan candidate is promoted without further clinical wording changes.
+Approved candidate promoted without further clinical wording changes.
 Gold source, matching DSL and all three compiled outputs are synchronised.
-The source and DSL headers both read UPDATED: 12 October 2026.
-The compiled prompt SHA-256 is dec498a1cb1df62837e27bd6640b39efcbb89fef67e210800b1fcf9671b93666.
+Both source headers read UPDATED: 13 October 2026.
+Compiled SHA-256: f7f22cd8f13dee61888804b50c33c1d44d4212bac80f829b71a01529073ff6b9
+Exact stripped parity; 503 unique stable DSL IDs; no deprecated EXS IDs.
+Compiler agreement and non-empty UTF-8 LF output verified.
+Full local source suite: 138 tests passed.
+Clean publication checkout checks are recorded in the publication receipt.
 
-Static checks: exact stripped parity, 503 unique stable IDs, no deprecated EXS IDs,
-compiler agreement, non-empty UTF-8 LF outputs and compiler tests.
-Full local source tests and clean-checkout checks are recorded in the publication receipt.
-
-Focused development evidence
-- Seven clinical-clarity consultations and three revised-case/control consultations were completed on this prompt.
-- The revised late ROP case, young normal-development control and cataract control retained correct final diagnoses.
-- Scorer v3.6 fixes singular/plural final wording separately; saved original results are retained.
-- Targeted examples and cases have informed development. These results are regression evidence, not unseen validation or a fresh 250-case benchmark.
-
-Scope
-This is a dated revision within v0.2.0. The historical September replay and frozen
-evaluation release are not replaced. The overnight candidate uses the separately
-accepted 250-case bank and tested operational safeguards. No new consultations or
-model calls were made for this publication and the overnight run has not started.
+Evidence and scope
+Targeted development trials and close controls informed this revision.
+The final original advanced-retinoblastoma and revised corneal-scarring
+consultations both reached correct final diagnoses. Changed cases and score
+policies are not evidence of an Alan-only performance gain.
+These are regression checks, not unseen validation or a fresh 250-case benchmark.
+Historical recordings, the September replay and frozen harness release remain
+unchanged. No model calls were made for publication; tonight's run has not started.

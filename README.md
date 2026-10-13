@@ -4,7 +4,7 @@
 
 *Thirty-three words. One clear plan.*
 
-**v0.2.0 · Prompt and README updated 12 October 2026**
+**v0.2.0 · Prompt and README updated 13 October 2026**
 
 Originally created 6 June 2023.
 
@@ -47,7 +47,7 @@ Authored as text, Alan can run through hosted APIs, on local hardware or on priv
 
 ## Evaluation harness
 
-The self-contained [evaluation harness](evaluation/README.md) includes a 250-case Excel bank, simulated health worker, separate judges, recorder and browser viewer. Follow its README to install it, run cases and export an offline HTML replay. The published package is **v1.0.0**, with its frozen Alan **v0.2.0** prompt from 8 September 2026.
+The self-contained [evaluation harness](evaluation/README.md) includes a 250-case Excel bank, simulated health worker, separate judges, recorder and browser viewer. Follow its README to install it, run cases and export an offline HTML replay. The published frozen package is **v1.0.0**, with Alan **v0.2.0** from 8 September 2026. The current prompt on `main` is the dated 13 October revision; the release package and historical replay retain their original inputs.
 
 [Watch the reviewed 250-case run](https://spider201866.github.io/alan/Alan-250.html) or [download the offline HTML replay](https://github.com/Spider201866/alan/releases/download/reviewed-run-ui-2026-10-03/Alan-250.html). Recorded on 7–8 September 2026, its viewer was refreshed on 3 October 2026. The recorded dialogues and reviewed assessments are unchanged.
 
@@ -80,7 +80,7 @@ Use fictional or properly de-identified cases. Patient-identifiable information 
 
 ## For Maintainers
 
-The DSL and compiled files now mirror the current gold source, `alan_sm.md`. This 20 September synchronisation includes source edits made since the frozen 8 September prompt. Validation and compiler tests pass; no new clinical model evaluation was run. See the [changelog](CHANGELOG.md#source-synchronisation---2026-09-20).
+The DSL and compiled files mirror the current gold source, `alan_sm.md`, dated 13 October 2026. Recent targeted trials have informed prompt, case-bank and evaluation development. They are regression checks on development material, not independent validation or a new full-bank result. See the [changelog](CHANGELOG.md#reviewed-prompt-revision--2026-10-13).
 
 [`Alan_DSL`](Alan_DSL) wraps the canonical prompt with stable IDs, TAGs and GROUPs for traceable editing and ablation. [`compile_DSL.py`](compile_DSL.py) is the primary compiler. [`compile.py`](compile.py) is retained as the legacy compiler. See [`DSL.md`](DSL.md) and [`CONTRIBUTING.md`](CONTRIBUTING.md) before changing prompt content.
 

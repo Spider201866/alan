@@ -56,7 +56,8 @@ The intended presence is useful rather than theatrical: manners, memory and purp
 
 - **6 June 2023:** first real working version of Alan, remembered in the project history as D-Day.
 - **23 June 2026:** first public GitHub release.
-- **13 October 2026:** reviewed prompt and matching DSL published after targeted development trials; a fresh full-bank evaluation remains pending.
+- **13 October 2026:** reviewed prompt and matching DSL published after targeted development trials.
+- **14 October 2026:** compact question-priority and cue refinements published with matching DSL after a 12-case development check; a fresh full-bank check of this revision remains pending.
 
 ## Principles in Brief
 

@@ -1,19 +1,17 @@
-Alan reviewed prompt publication — 13 October 2026
+Alan reviewed prompt publication — 14 October 2026
 
-Approved candidate promoted without further clinical wording changes.
-Gold source, matching DSL and all three compiled outputs are synchronised.
-Both source headers read UPDATED: 13 October 2026.
-Compiled SHA-256: f7f22cd8f13dee61888804b50c33c1d44d4212bac80f829b71a01529073ff6b9
-Exact stripped parity; 503 unique stable DSL IDs; no deprecated EXS IDs.
-Compiler agreement and non-empty UTF-8 LF output verified.
-Full local source suite: 138 tests passed.
-Clean publication checkout checks are recorded in the publication receipt.
+The exact tested candidate is published without further clinical wording changes.
+Source and DSL headers: UPDATED: 14 October 2026. Version remains v0.2.0.
+Compiled SHA-256: a9228a2be1e313cff0e015b0902bc06cac1cec97b90c755a3cb2889302df9bc1
+All compiled aliases match; source/DSL parity, lint and UTF-8 LF checked.
+503 unique stable DSL IDs; no deprecated EXS IDs.
+Current source tests and clean-publication compiler checks are recorded in the publication receipt.
 
-Evidence and scope
-Targeted development trials and close controls informed this revision.
-The final original advanced-retinoblastoma and revised corneal-scarring
-consultations both reached correct final diagnoses. Changed cases and score
-policies are not evidence of an Alan-only performance gain.
-These are regression checks, not unseen validation or a fresh 250-case benchmark.
-Historical recordings, the September replay and frozen harness release remain
-unchanged. No model calls were made for publication; tonight's run has not started.
+Evidence: 12 local development consultations, comprising seven previously
+flagged cases and five nearby passing controls. All received diagnosis credit;
+no serious unsafe advice was flagged. Current judge policy and familiar cases
+limit comparisons; this is a regression check, not independent validation.
+Source is 12 words shorter with unchanged compiled token count.
+Cases, worker examples and eight-word/two-finding limits were unchanged.
+Historical results, the September replay and frozen harness release remain intact.
+The next full 250-case run of this revision has not started.

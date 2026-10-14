@@ -1,5 +1,13 @@
 # Changelog
 
+## Reviewed prompt revision — 2026-10-14
+
+- Published the tested gold source, matching DSL and all three compiled outputs with the 14 October source date. No clinical wording was changed during publication.
+- Five compact replacements clarify question priority, lens-versus-retina evidence, ocular albinism cues and progression after urgent care. Alan is 12 words shorter; compiled token count is unchanged.
+- A local 12-case development trial covered seven previously flagged cases and five passing controls. All 12 received diagnosis credit under the recorded judge policy, with no serious unsafe advice flagged. These familiar cases do not provide independent validation or isolate prompt changes from assessment changes.
+- Preserved the case bank, authored health-worker examples, eight-word/two-finding limits and all original results. The historical replay and frozen September harness release are unchanged.
+- A fresh 250-case run of this revision has not started.
+
 ## Reviewed prompt revision — 2026-10-13
 
 - Published the approved gold source, matching DSL and all three compiled outputs with the 13 October source date. No additional clinical wording changes were made during publication.

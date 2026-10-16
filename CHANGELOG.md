@@ -1,5 +1,14 @@
 # Changelog
 
+## Reviewed prompt revision — 2026-10-16
+
+- Published the dated gold source, matching DSL and three byte-identical compiled outputs. Stable rule IDs and safety-controller ownership are preserved.
+- Incorporated the approved corneal-localisation, supplied-fact, concise-output and care-priority refinements. The latest replacement gives medication schedules, timed review/referral and deterioration advice priority over explanation. It adds no words or tokens.
+- Retained age-pairing and question rules. The latest one-line replacement leaves all Alan examples, authored worker examples and eight-word/two-finding limits unchanged.
+- Focused development trials and passing controls check familiar cases. Results are mixed: improved length compliance does not establish better care in every case. These are regression checks, not independent clinical validation or a new 250-case performance claim.
+- A separate saved hearing dialogue was reassessed by the unchanged clinical judge after a conditional reference clarification. Its original judgement and dialogue are retained; this is an assessment correction, not improved Alan performance.
+- The fresh 250-case package is prepared with technical recovery and two separate follow-up attempts for eligible results. It has not started. The September replay and frozen release remain unchanged.
+
 ## Reviewed prompt revision — 2026-10-14
 
 - Published the tested gold source, matching DSL and all three compiled outputs with the 14 October source date. No clinical wording was changed during publication.

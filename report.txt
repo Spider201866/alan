@@ -1,17 +1,22 @@
-Alan reviewed prompt publication — 14 October 2026
+Alan prompt publication — 16 October 2026
 
-The exact tested candidate is published without further clinical wording changes.
-Source and DSL headers: UPDATED: 14 October 2026. Version remains v0.2.0.
-Compiled SHA-256: a9228a2be1e313cff0e015b0902bc06cac1cec97b90c755a3cb2889302df9bc1
-All compiled aliases match; source/DSL parity, lint and UTF-8 LF checked.
-503 unique stable DSL IDs; no deprecated EXS IDs.
-Current source tests and clean-publication compiler checks are recorded in the publication receipt.
+Gold source and DSL date: 16 October 2026. Version remains v0.2.0.
+Compiled SHA-256: cb5aa3e17c929702e7720c872b58327e20aeb78b833049a42ab956e0f8a1f25b
+Exact source/DSL parity, 503 stable wrappers, UTF-8 LF and compiled alias equality verified.
+138 source tests, 257 harness tests and replay core checks pass.
 
-Evidence: 12 local development consultations, comprising seven previously
-flagged cases and five nearby passing controls. All received diagnosis credit;
-no serious unsafe advice was flagged. Current judge policy and familiar cases
-limit comparisons; this is a regression check, not independent validation.
-Source is 12 words shorter with unchanged compiled token count.
-Cases, worker examples and eight-word/two-finding limits were unchanged.
-Historical results, the September replay and frozen harness release remain intact.
-The next full 250-case run of this revision has not started.
+Four fresh focused regression checks, using GPT-6.1 Sol Low for Alan and the worker
+and GPT-6.1 Sol Medium for the judge. Author-edited worker examples and limits unchanged.
+ENT-039: clinical score 94; final reply 31 words.
+ENT-014: clinical score 94; final reply 30 words.
+ENT-032: clinical score 100; final reply 32 words.
+DER-037: clinical score 100; final reply 26 words.
+
+The infant feeding warning is now present. Review intervals remain imprecise in both routine cases.
+The judge accepts the anaphylaxis control, but its reply omits explicit airway/breathing support.
+This does not establish complete retention of every essential-care detail.
+
+Clinical verdicts remain the judge's. Python formatting flags do not override them.
+These familiar cases are development checks, not independent clinical validation.
+The reference-only saved-dialogue reassessment is separate from fresh Alan results.
+The original recordings and scores are retained. The fresh 250-case run has not started.

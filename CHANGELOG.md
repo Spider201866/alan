@@ -2,6 +2,11 @@
 
 ## Reviewed prompt revision — 2026-10-18
 
+- Final 18 October review: updated the approved teaching examples, practical how-to guidance, safety wording and memory across eye, ENT and skin care. Retained the authored voice, darker-skin teaching emphasis, sleep-well cue and approximate teaching percentages.
+- Consolidated duplicated rules and clarified occasional acknowledgements and the zero-score style branch. Retained the prohibition on word counting to avoid wasteful small-model reasoning loops. Retired AGT-120 and MEM-680 after consolidation; retained identifiers and groups are unchanged.
+- Source and DSL match; all three compiled outputs are identical. Compiled prompt: 15,591 whitespace words and 104,887 UTF-8 bytes. Local technical checks: 138 source tests and 279 offline harness tests pass. These checks do not establish a new clinical-performance result.
+- The original health-worker examples and eight-word/two-finding limits are unchanged. The fresh 250-case regression is being prepared with technical recovery, contextual length scoring and two separate follow-up attempts for eligible results; it has not started.
+
 - Later on 18 October, updated only the AOM example final answer (EXM-060) and swollen-cheek memory (MEM-760): immediate pain relief, practical follow-up and antibiotics conditional on spreading or systemic dental infection. Matching DSL and compiled outputs are synchronised. The prompt is now 15,637 words and 104,771 bytes, two words and four cl100k tokens shorter than the preceding revision.
 - Four familiar development consultations showed pain relief in both targets, with both close controls retaining correct diagnoses. A separate saved-dialogue reassessment corrected an urgency/marker judgement; this is a judging correction, not improved Alan performance. Original scores and dialogues remain preserved.
 

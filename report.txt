@@ -1,12 +1,11 @@
-Alan symptom-care prompt publication — 18 October 2026
+Alan reviewed prompt publication — 18 October 2026
 
-Gold source and matching DSL remain v0.2.0, dated 18 October 2026.
-Compiled SHA-256: 291dc64f9616569bef9116860a6fcd59df1bd456d87beb99122c9726ef529421
-Only EXM-060 final answer and MEM-760 are changed since 936e369.
-Three compiled aliases are byte-identical. Source/DSL parity, stable wrappers and UTF-8 LF pass.
-138 source tests pass. Compiled prompt: 15,637 words, 104,771 bytes, 27,907 cl100k tokens.
-Four familiar development cases: all diagnoses credited; pain relief appeared in both targets.
-Original scores 94,100,100,100 are retained; a separate judge-only review changed the ear score to 100.
-This is development evidence, not independent clinical validation or an isolated causal estimate.
+Gold source and matching DSL: v0.2.0, dated 18 October 2026.
+Compiled SHA-256: d790a6ce491a667f913c46c18f854af40f71267bc0780b8ded0b1c2064242aae
+501 retained wrapped rules; AGT-120 and MEM-680 retired after consolidation.
+Source/DSL parity, allowed unique identifiers and UTF-8 LF checks pass.
+Three compiled outputs are identical: 15,591 words and 104,887 bytes.
+138 local source tests and 279 offline harness tests pass.
+Earlier targeted trials informed development; no fresh clinical evaluation of the combined revision is claimed.
 Author worker examples and eight-word/two-finding limits are unchanged.
-No cases or model calls were started for publication or preparation.
+No new cases or model calls were started for publication or preparation.

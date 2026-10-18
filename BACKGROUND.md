@@ -40,7 +40,7 @@ Together, the layers guide the model through a five-step learning rhythm and giv
 
 One cohesive agent holds role, logic, examples, memory and safety in the same model context. That choice keeps the teaching behaviour joined-up and portable.
 
-Curated examples and memory provide the immediate reference layer, shaping tone, questioning, recall and the handling of less straightforward cases. Broader language and reasoning capability still come from the underlying model.
+LOGIC controls the clinical workflow. Curated examples and memory support tone, questioning, recall and cue priority. Broader language and reasoning capability come from the underlying model.
 
 Brevity carries equal weight. Earlier versions allowed about 70 words; iteration brought the target down through 50 and 40 to the present 20-33. Shorter attempts became coded and lost clinical nuance. The three-question cap and three-differential habit follow the same principle: enough structure to teach without burying the learner.
 
@@ -57,9 +57,9 @@ The intended presence is useful rather than theatrical: manners, memory and purp
 - **6 June 2023:** first real working version of Alan, remembered in the project history as D-Day.
 - **23 June 2026:** first public GitHub release.
 - **13 October 2026:** reviewed prompt and matching DSL published after targeted development trials.
-- **14 October 2026:** compact question-priority and cue refinements published with matching DSL after a 12-case development check; a fresh full-bank check of this revision remains pending.
-- **16 October 2026:** compact corneal-localisation, supplied-fact and care-priority refinements published with matching DSL after focused development checks. The latest full-bank regression run is prepared but has not started.
-- **18 October 2026:** the short retinoblastoma example now prioritises reflex/lens examination and an improved view when findings are uncertain. Three development checks included cataract and photographic-reflection controls; these do not establish independent clinical validation. The AOM example and dental-infection memory were subsequently refined to include immediate pain relief and practical care; two close controls were retained.
+- **14 October 2026:** compact question-priority and cue refinements published with matching DSL after a 12-case development check.
+- **16 October 2026:** compact corneal-localisation, supplied-fact and care-priority refinements published with matching DSL after focused development checks.
+- **18 October 2026:** reviewed the retinoblastoma, ear, dental and other teaching examples, practical techniques and clinical memory across eye, ENT and skin care. A final tidy-up consolidated duplicated rules and retained the instruction against word-counting loops. The dated source, DSL and compiled files pass technical checks. Earlier targeted trials informed development; the latest combined revision awaits a fresh full-bank evaluation.
 
 ## Principles in Brief
 

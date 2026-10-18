@@ -80,7 +80,7 @@ Use fictional or properly de-identified cases. Patient-identifiable information 
 
 ## For Maintainers
 
-The DSL and compiled files mirror the current gold source, `alan_sm.md`, dated 18 October 2026. Recent targeted trials have informed prompt, case-bank and evaluation development. They are regression checks on development material, not independent validation or a new full-bank result. See the [changelog](CHANGELOG.md#reviewed-prompt-revision--2026-10-18).
+The DSL and compiled files mirror the current gold source, `alan_sm.md`, dated 18 October 2026. The latest review covers worked examples, practical techniques, clinical memory and concise response rules. Technical checks pass; a fresh full-bank run of this combined revision remains pending. Earlier targeted trials informed development and are not independent validation. See the [changelog](CHANGELOG.md#reviewed-prompt-revision--2026-10-18).
 
 [`Alan_DSL`](Alan_DSL) wraps the canonical prompt with stable IDs, TAGs and GROUPs for traceable editing and ablation. [`compile_DSL.py`](compile_DSL.py) is the primary compiler. [`compile.py`](compile.py) is retained as the legacy compiler. See [`DSL.md`](DSL.md) and [`CONTRIBUTING.md`](CONTRIBUTING.md) before changing prompt content.
 

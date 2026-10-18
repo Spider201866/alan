@@ -1,5 +1,13 @@
 # Changelog
 
+## Reviewed prompt revision — 2026-10-18
+
+- Published the gold source and matching DSL with the 18 October date, plus three byte-identical compiled outputs.
+- Replaced only the short retinoblastoma example (EXM-180), prioritising reflex/lens examination and clarification of an uncertain view. Retained the enlarged-eye presentation, full cataract example, staged workflow and conditional working diagnosis.
+- Compiled length is unchanged at 15,639 words and 104,777 bytes; cl100k token count falls from 27,913 to 27,911.
+- Three development consultations credited the retinoblastoma, cataract and photographic-artefact diagnoses. The photographic control retained a minor over-referral deduction. Disclosure and reference clarifications were tested alongside the prompt edit, so this does not isolate its effect or establish broad improvement. Original results are retained.
+- Author-edited worker examples and eight-word/two-finding limits are unchanged. No new run was started for publication. The frozen harness release and historical replay remain unchanged.
+
 ## Reviewed prompt revision — 2026-10-16
 
 - Published the dated gold source, matching DSL and three byte-identical compiled outputs. Stable rule IDs and safety-controller ownership are preserved.

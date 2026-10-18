@@ -1,22 +1,15 @@
-Alan prompt publication — 16 October 2026
+Alan prompt publication — 18 October 2026
 
-Gold source and DSL date: 16 October 2026. Version remains v0.2.0.
-Compiled SHA-256: cb5aa3e17c929702e7720c872b58327e20aeb78b833049a42ab956e0f8a1f25b
-Exact source/DSL parity, 503 stable wrappers, UTF-8 LF and compiled alias equality verified.
-138 source tests, 257 harness tests and replay core checks pass.
+Gold source and DSL: v0.2.0, updated 18 October 2026.
+Compiled SHA-256: f85b3f1a061ce52cd7f78bc674063c60f6b1008c2b40c1ac5191acbffb0dd968
+Source/DSL parity, 503 stable unique wrappers, compiler equality and UTF-8 LF pass.
+138 source tests, 269 maintained-harness tests, frozen disclosure tests and replay core pass.
 
-Four fresh focused regression checks, using GPT-6.1 Sol Low for Alan and the worker
-and GPT-6.1 Sol Medium for the judge. Author-edited worker examples and limits unchanged.
-ENT-039: clinical score 94; final reply 31 words.
-ENT-014: clinical score 94; final reply 30 words.
-ENT-032: clinical score 100; final reply 32 words.
-DER-037: clinical score 100; final reply 26 words.
-
-The infant feeding warning is now present. Review intervals remain imprecise in both routine cases.
-The judge accepts the anaphylaxis control, but its reply omits explicit airway/breathing support.
-This does not establish complete retention of every essential-care detail.
-
-Clinical verdicts remain the judge's. Python formatting flags do not override them.
-These familiar cases are development checks, not independent clinical validation.
-The reference-only saved-dialogue reassessment is separate from fresh Alan results.
-The original recordings and scores are retained. The fresh 250-case run has not started.
+EXM-180 prioritises reflex/lens examination and clarification of uncertain findings.
+Compiled words and bytes are unchanged; two cl100k tokens shorter.
+Three development cases: retinoblastoma 100, congenital cataracts 100, photographic artefact 94.
+The final control retains a minor over-referral deduction. All 15 Alan replies are within 33 words.
+The trial combines prompt, disclosure and reference changes; it is not an isolated prompt comparison
+or new independent holdout result. Original recordings and assessments are preserved.
+Author-edited worker examples, eight-word/two-finding limits and model settings are unchanged.
+No new model calls or consultations for publication. Live evaluation authorisation remains closed.

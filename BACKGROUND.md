@@ -59,7 +59,7 @@ The intended presence is useful rather than theatrical: manners, memory and purp
 - **13 October 2026:** reviewed prompt and matching DSL published after targeted development trials.
 - **14 October 2026:** compact question-priority and cue refinements published with matching DSL after a 12-case development check; a fresh full-bank check of this revision remains pending.
 - **16 October 2026:** compact corneal-localisation, supplied-fact and care-priority refinements published with matching DSL after focused development checks. The latest full-bank regression run is prepared but has not started.
-- **18 October 2026:** the short retinoblastoma example now prioritises reflex/lens examination and an improved view when findings are uncertain. Three development checks included cataract and photographic-reflection controls; these do not establish independent clinical validation.
+- **18 October 2026:** the short retinoblastoma example now prioritises reflex/lens examination and an improved view when findings are uncertain. Three development checks included cataract and photographic-reflection controls; these do not establish independent clinical validation. The AOM example and dental-infection memory were subsequently refined to include immediate pain relief and practical care; two close controls were retained.
 
 ## Principles in Brief
 

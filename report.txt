@@ -1,15 +1,12 @@
-Alan prompt publication — 18 October 2026
+Alan symptom-care prompt publication — 18 October 2026
 
-Gold source and DSL: v0.2.0, updated 18 October 2026.
-Compiled SHA-256: f85b3f1a061ce52cd7f78bc674063c60f6b1008c2b40c1ac5191acbffb0dd968
-Source/DSL parity, 503 stable unique wrappers, compiler equality and UTF-8 LF pass.
-138 source tests, 269 maintained-harness tests, frozen disclosure tests and replay core pass.
-
-EXM-180 prioritises reflex/lens examination and clarification of uncertain findings.
-Compiled words and bytes are unchanged; two cl100k tokens shorter.
-Three development cases: retinoblastoma 100, congenital cataracts 100, photographic artefact 94.
-The final control retains a minor over-referral deduction. All 15 Alan replies are within 33 words.
-The trial combines prompt, disclosure and reference changes; it is not an isolated prompt comparison
-or new independent holdout result. Original recordings and assessments are preserved.
-Author-edited worker examples, eight-word/two-finding limits and model settings are unchanged.
-No new model calls or consultations for publication. Live evaluation authorisation remains closed.
+Gold source and matching DSL remain v0.2.0, dated 18 October 2026.
+Compiled SHA-256: 291dc64f9616569bef9116860a6fcd59df1bd456d87beb99122c9726ef529421
+Only EXM-060 final answer and MEM-760 are changed since 936e369.
+Three compiled aliases are byte-identical. Source/DSL parity, stable wrappers and UTF-8 LF pass.
+138 source tests pass. Compiled prompt: 15,637 words, 104,771 bytes, 27,907 cl100k tokens.
+Four familiar development cases: all diagnoses credited; pain relief appeared in both targets.
+Original scores 94,100,100,100 are retained; a separate judge-only review changed the ear score to 100.
+This is development evidence, not independent clinical validation or an isolated causal estimate.
+Author worker examples and eight-word/two-finding limits are unchanged.
+No cases or model calls were started for publication or preparation.

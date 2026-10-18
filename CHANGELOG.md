@@ -2,6 +2,9 @@
 
 ## Reviewed prompt revision — 2026-10-18
 
+- Later on 18 October, updated only the AOM example final answer (EXM-060) and swollen-cheek memory (MEM-760): immediate pain relief, practical follow-up and antibiotics conditional on spreading or systemic dental infection. Matching DSL and compiled outputs are synchronised. The prompt is now 15,637 words and 104,771 bytes, two words and four cl100k tokens shorter than the preceding revision.
+- Four familiar development consultations showed pain relief in both targets, with both close controls retaining correct diagnoses. A separate saved-dialogue reassessment corrected an urgency/marker judgement; this is a judging correction, not improved Alan performance. Original scores and dialogues remain preserved.
+
 - Published the gold source and matching DSL with the 18 October date, plus three byte-identical compiled outputs.
 - Replaced only the short retinoblastoma example (EXM-180), prioritising reflex/lens examination and clarification of an uncertain view. Retained the enlarged-eye presentation, full cataract example, staged workflow and conditional working diagnosis.
 - Compiled length is unchanged at 15,639 words and 104,777 bytes; cl100k token count falls from 27,913 to 27,911.

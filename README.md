@@ -4,7 +4,7 @@
 
 *Thirty-three words. One clear plan.*
 
-**v0.2.0 · Prompt and README updated 18 October 2026**
+**v0.2.0 · Prompt and README updated 19 October 2026**
 
 Originally created 6 June 2023.
 
@@ -47,7 +47,7 @@ Authored as text, Alan can run through hosted APIs, on local hardware or on priv
 
 ## Evaluation harness
 
-The self-contained [evaluation harness](evaluation/README.md) includes a 250-case Excel bank, simulated health worker, separate judges, recorder and browser viewer. Follow its README to install it, run cases and export an offline HTML replay. The published frozen package is **v1.0.0**, with Alan **v0.2.0** from 8 September 2026. The current prompt on `main` is the dated 18 October revision; the release package and historical replay retain their original inputs.
+The self-contained [evaluation harness](evaluation/README.md) includes a 250-case Excel bank, simulated health worker, separate judges, recorder and browser viewer. Follow its README to install it, run cases and export an offline HTML replay. The published frozen package is **v1.0.0**, with Alan **v0.2.0** from 8 September 2026. The current prompt on `main` is the dated 19 October revision; the release package and historical replay retain their original inputs.
 
 [Watch the reviewed 250-case run](https://spider201866.github.io/alan/Alan-250.html) or [download the offline HTML replay](https://github.com/Spider201866/alan/releases/download/reviewed-run-ui-2026-10-03/Alan-250.html). Recorded on 7–8 September 2026, its viewer was refreshed on 3 October 2026. The recorded dialogues and reviewed assessments are unchanged.
 
@@ -80,7 +80,7 @@ Use fictional or properly de-identified cases. Patient-identifiable information 
 
 ## For Maintainers
 
-The DSL and compiled files mirror the current gold source, `alan_sm.md`, dated 18 October 2026. The latest review covers worked examples, practical techniques, clinical memory and concise response rules. Technical checks pass; a fresh full-bank run of this combined revision remains pending. Earlier targeted trials informed development and are not independent validation. See the [changelog](CHANGELOG.md#reviewed-prompt-revision--2026-10-18).
+The DSL and compiled files mirror the current gold source, `alan_sm.md`, dated 19 October 2026. The latest review covers worked examples, practical techniques, clinical memory and concise response rules. Technical checks pass; a fresh full-bank run of this combined revision remains pending. Earlier targeted trials informed development and are not independent validation. See the [changelog](CHANGELOG.md#reviewed-prompt-revision--2026-10-19).
 
 [`Alan_DSL`](Alan_DSL) wraps the canonical prompt with stable IDs, TAGs and GROUPs for traceable editing and ablation. [`compile_DSL.py`](compile_DSL.py) is the primary compiler. [`compile.py`](compile.py) is retained as the legacy compiler. See [`DSL.md`](DSL.md) and [`CONTRIBUTING.md`](CONTRIBUTING.md) before changing prompt content.
 

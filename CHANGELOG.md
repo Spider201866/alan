@@ -1,5 +1,13 @@
 # Changelog
 
+## Reviewed prompt revision — 2026-10-19
+
+- Published the exact tested 19 October gold source, matching DSL and all three compiled outputs. No clinical wording was changed during publication.
+- Compact replacements clarify integrated medical history, decisive questions, postoperative corneal localisation, retinoblastoma history, clinical continuation after deflection and the distinction between safety enquiry and immediate airway takeover.
+- The latest four-case development check completed without technical failure. Three challenge objectives passed and an ordinary dry-eye control received diagnosis credit. Remaining gaps include a 34-word final reply and unnecessary questions in a washable-paint clarification. Familiar development cases do not establish independent or full-bank validation.
+- Author worker examples, eight-word/two-finding limits and all original results remain unchanged. The historical replay and September frozen harness release retain their original inputs.
+- A separate v5 bank and corrected natural-dialogue harness are prepared locally for a later fresh 250-case run; this publication does not start that run or publish local evaluation records.
+
 ## Reviewed prompt revision — 2026-10-18
 
 - Final 18 October review: updated the approved teaching examples, practical how-to guidance, safety wording and memory across eye, ENT and skin care. Retained the authored voice, darker-skin teaching emphasis, sleep-well cue and approximate teaching percentages.

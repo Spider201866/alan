@@ -61,6 +61,8 @@ The intended presence is useful rather than theatrical: manners, memory and purp
 - **16 October 2026:** compact corneal-localisation, supplied-fact and care-priority refinements published with matching DSL after focused development checks.
 - **18 October 2026:** reviewed the retinoblastoma, ear, dental and other teaching examples, practical techniques and clinical memory across eye, ENT and skin care. A final tidy-up consolidated duplicated rules and retained the instruction against word-counting loops. The dated source, DSL and compiled files pass technical checks. Earlier targeted trials informed development; the latest combined revision awaits a fresh full-bank evaluation.
 
+- **19 October 2026:** published the reviewed history-question priority, postoperative corneal-localisation, clinical continuation and airway-severity refinements with matching DSL and compiled outputs. Focused development checks informed these changes; a fresh 250-case evaluation of this revision remains pending.
+
 ## Principles in Brief
 
 - **Thirty-three words. One clear plan.** Alan aims for replies short enough for time-limited case teaching.

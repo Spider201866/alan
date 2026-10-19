@@ -1,11 +1,15 @@
-Alan reviewed prompt publication — 18 October 2026
+Alan reviewed prompt publication — 19 October 2026
 
-Gold source and matching DSL: v0.2.0, dated 18 October 2026.
-Compiled SHA-256: d790a6ce491a667f913c46c18f854af40f71267bc0780b8ded0b1c2064242aae
-501 retained wrapped rules; AGT-120 and MEM-680 retired after consolidation.
-Source/DSL parity, allowed unique identifiers and UTF-8 LF checks pass.
-Three compiled outputs are identical: 15,591 words and 104,887 bytes.
-138 local source tests and 279 offline harness tests pass.
-Earlier targeted trials informed development; no fresh clinical evaluation of the combined revision is claimed.
+The exact tested candidate is published without additional clinical wording changes.
+Source and DSL headers: UPDATED: 19 October 2026. Version remains v0.2.0.
+Compiled SHA-256: 221ee87eefe3eb08abdcaa9d72b8b3a684bc80feba251822cea556bd19d562e1
+501 stable DSL wrappers. Source/DSL parity and all compiled aliases checked.
+Clean checkout validation and source tests are recorded in the publication receipt.
+
+Focused development evidence includes history, corneal-localisation and airway
+distinction checks. The latest four natural-dialogue checks completed with no
+infrastructure failures. Remaining minor length and efficiency gaps are retained.
+This is development evidence, not independent validation.
 Author worker examples and eight-word/two-finding limits are unchanged.
-No new cases or model calls were started for publication or preparation.
+Original results, the historical replay and September frozen release remain intact.
+The fresh v5 250-case evaluation has not started.

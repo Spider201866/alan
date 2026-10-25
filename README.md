@@ -4,7 +4,7 @@
 
 *Thirty-three words. One clear plan.*
 
-**v0.2.0 · Prompt and README updated 19 October 2026**
+**v0.2.0 · Prompt and README updated 25 October 2026**
 
 Originally created 6 June 2023.
 

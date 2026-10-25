@@ -1,15 +1,13 @@
-Alan reviewed prompt publication — 19 October 2026
+Alan prompt validation — 25 October 2026
 
-The exact tested candidate is published without additional clinical wording changes.
-Source and DSL headers: UPDATED: 19 October 2026. Version remains v0.2.0.
-Compiled SHA-256: 221ee87eefe3eb08abdcaa9d72b8b3a684bc80feba251822cea556bd19d562e1
-501 stable DSL wrappers. Source/DSL parity and all compiled aliases checked.
-Clean checkout validation and source tests are recorded in the publication receipt.
+Removed the obsolete record-lookup dependency and fetched personalisation from the current prompt. All 14 name placeholders and the fetched role, experience and location instructions have been removed. The existing unknown-location answer is retained. Clinical intake, anti-simulation rules, patient-name boundaries, safety, staging and clinical instructions are unchanged. Two teaching-example edits remove only the name placeholder. AGT-090 is retired and has not been reused.
 
-Focused development evidence includes history, corneal-localisation and airway
-distinction checks. The latest four natural-dialogue checks completed with no
-infrastructure failures. Remaining minor length and efficiency gaps are retained.
-This is development evidence, not independent validation.
-Author worker examples and eight-word/two-finding limits are unchanged.
-Original results, the historical replay and September frozen release remain intact.
-The fresh v5 250-case evaluation has not started.
+Gold source and stripped DSL: exact parity.
+DSL lint: 500 rules, 500 unique IDs, allowed section/tag/group values and no deprecated EXS IDs.
+Legacy compiler, primary DSL compiler and compiled alias: identical, non-empty UTF-8 LF output without BOM.
+Compiled SHA-256: 1a3f4f3555c36bfff01140840f12ef5437c84cae71be435f5b3888fbaa3f4b63
+Compiled bytes: 104,860 -> 104,170 (690 fewer).
+Whitespace words: 15,581 -> 15,489 (92 fewer).
+All current compiled outputs contain no obsolete lookup instructions or personalisation placeholders.
+
+Local maintained-source suite: all 138 tests pass. Clean publication snapshot: validation and all 9 compiler tests pass. No live model calls or new clinical-performance claims. Historical recordings, frozen harness snapshots, worker prompts, case banks and scores are not part of this publication.

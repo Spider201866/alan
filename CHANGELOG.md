@@ -1,5 +1,11 @@
 # Changelog
 
+## Obsolete record lookup removed — 2026-10-25
+
+- Removed the unused record-lookup call and its fetched name, role, experience and location dependencies. Canned replies and the two affected teaching examples no longer contain personalisation placeholders.
+- Preserved clinical intake without greetings, the prohibition on simulated tool calls and ambient metadata, patient-name boundaries and the existing unavailable-location reply.
+- Retired AGT-090 without reusing its ID. Source, DSL and compiled outputs remain aligned; clinical rules and the five-stage workflow are unchanged. This is an authored feature removal, not a claim of improved clinical performance.
+
 ## Reviewed prompt revision — 2026-10-19
 
 - Published the exact tested 19 October gold source, matching DSL and all three compiled outputs. No clinical wording was changed during publication.
